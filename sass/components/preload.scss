@@ -1,0 +1,7 @@
+#background-video-wrap {
+  opacity: 0;
+  transition: 1s opacity ease-in-out;
+  &.loaded {
+    opacity: 1;
+  }
+}
