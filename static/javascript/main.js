@@ -37,7 +37,7 @@ exports.default = preloader;
 function preloader() {
   var video = document.getElementById("background-video");
   var videowrap = document.getElementById("background-video-wrap");
-  var url = "Some video url";
+  var url = video.src;
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.responseType = "arraybuffer";
