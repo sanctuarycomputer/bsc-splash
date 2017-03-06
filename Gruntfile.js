@@ -37,7 +37,7 @@ module.exports = function(grunt) {
      browserify: {
        dist: {
          options: {
-           transform: [['babelify', { presets: ['es2015', 'react'] }]]
+           transform: [['babelify', { presets: ['es2015'] }]]
          },
          files: { './static/javascript/main.js': ['./javascript/index.js'] }
        }
@@ -51,6 +51,20 @@ module.exports = function(grunt) {
           files: ['./javascript/**/*.js'],
           tasks: ['browserify', 'build']
         }
+     },
+     postcss: {
+       options: {
+        // map: true, // inline sourcemaps
+         processors: [
+           require('pixrem')(), // add fallbacks for rem units
+           require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+           require('cssnano')() // minify the result
+         ]
+       },
+       dist: {
+         src: 'static/css/main.css',
+         dest: 'static/css/main.css'
+       }
      }
   });
   grunt.loadNpmTasks('grunt-contrib-sass');
