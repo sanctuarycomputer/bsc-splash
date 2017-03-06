@@ -15,9 +15,47 @@ module.exports = function(grunt) {
   //
   // You have been warned!
   grunt.initConfig({
+    sass: {
+       dev: {
+         options: {
+           // We used the expanded style because Webhook already minifies CSS when it deploys your site.
+           style: 'expanded',
 
+           // Uncomment the below line to include outside directories as well.
+           // loadPath: ['location/of/other/sass']
+         },
+         files: [{
+           // Files in the /sass/ directory will go to /static/css/ when processed.
+           expand: true,
+           cwd: 'sass',
+           src: ['main.scss'],
+           dest: 'static/css',
+           ext: '.css'
+         }]
+       }
+     },
+     browserify: {
+       dist: {
+         options: {
+           transform: [['babelify', { presets: ['es2015', 'react'] }]]
+         },
+         files: { './static/javascript/main.js': ['./javascript/index.js'] }
+       }
+     },
+     watch: {
+        sass : {
+          files: ['sass/**/*.scss'],
+          tasks: ['sass', 'build', 'postcss']
+        },
+        scripts: {
+          files: ['./javascript/**/*.js'],
+          tasks: ['browserify', 'build']
+        }
+     }
   });
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-postcss');
   // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
   require('./options/generatorOptions.js')(grunt);
   grunt.loadTasks('tasks');
