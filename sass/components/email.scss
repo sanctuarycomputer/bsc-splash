@@ -7,21 +7,21 @@
     background-color: transparent;
   }
   .button{
-    background-color: blue;
+    background-color: $blue;
     color:lavender;
   }
   ::-webkit-input-placeholder {
-      color: blue;
+      color: $blue;
   }
   :-moz-placeholder {
-     color:    blue;
+     color:    $blue;
      opacity:  1;
   }
   ::-moz-placeholder {
-     color:   blue;
+     color:   $blue;
      opacity:  1;
   }
-  :-ms-input-placeholder { 
-     color:    blue;
+  :-ms-input-placeholder {
+     color:    $blue;
   }
 }
