@@ -1,0 +1,27 @@
+.email{
+  .border-radius{
+    border-radius: 10px;
+    border: 5px solid blue;
+  }
+  .input{
+    background-color: transparent;
+  }
+  .button{
+    background-color: blue;
+    color:lavender;
+  }
+  ::-webkit-input-placeholder {
+      color: blue;
+  }
+  :-moz-placeholder {
+     color:    blue;
+     opacity:  1;
+  }
+  ::-moz-placeholder {
+     color:   blue;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { 
+     color:    blue;
+  }
+}
