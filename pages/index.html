@@ -8,6 +8,28 @@
 {% block title %}{% parent %} - Homepage{% endblock %}
 
 {% block content %}
+<div class="content-container fixed flex-column justify-center flex ">
+  <div class="content flex-column flex mx-auto justify-center col col-8">
+    <div class="logo mx-auto">
+      <img src="static/images/logo.png"/>
+    </div>
+    <div class="copy my3 mx-auto">
+      <p class="h2 blue bold center">
+      BAKING INGREDIENTS SHIPPED TO YOUR DOOR<br>
+      DESIGNED TO TASTE GREAT WITH "HERBAL" BUTTERS<br>
+      TOTALLY GLUTEN FREE AND GOOD FOR YOU
+      </p>
+    </div>
+    <div class="email mx-auto">
+      <form class="mailchimp-form flex-column flex">
+       <input id='email' class='border-radius h2 center py1 my1 input' placeholder='HIGH@ON-BAKED-EDIBLES.COM' type='email'>
+       <button type='submit' class='border-radius h2 center py1 my1 button'><p>GIVE ME THEM UPDATES</p></button>
+       <label><p class='center h4 bold blue my1'>(SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE)</p></label>
+     </form>
+    </div>
+  </div>
+</div>
+
 <div class="covervid-wrapper" id="background-video-wrap">
     <video class="covervid-video" autoplay loop poster="static/videos/gilmore.gif">
         <source src="static/videos/large.mp4" id="background-video" type="video/webm">

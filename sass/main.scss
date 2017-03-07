@@ -1,5 +1,11 @@
+@import 'utils/color';
+
 @import 'components/covervid';
 @import 'components/preload';
+@import 'components/content';
+@import 'components/email';
+@import 'components/copy';
+
 
 html,body {
   width:100%;
