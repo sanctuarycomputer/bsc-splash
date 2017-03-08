@@ -16,7 +16,7 @@ $(document).ready(function () {
   (0, _initCoverVideo2.default)();
 });
 
-},{"./initCoverVideo":2,"./preloader":3}],2:[function(require,module,exports){
+},{"./initCoverVideo":2,"./preloader":4}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33,9 +33,73 @@ function initCoverVideo() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.outInterval = outInterval;
+exports.slowRotation = slowRotation;
+exports.pageLoaded = pageLoaded;
+var logo = document.querySelector('.loader');
+var loaded = false;
+var rotationNum = 0;
+var rotationNumNeg = 0;
+var goTo = null;
+var out = document.getElementById("out");
+var inner = document.getElementById("in");
+var face = document.getElementById("face");
+
+function outInterval() {
+  if (loaded) return;
+  rotationNum += 6;
+  rotationNumNeg += -6;
+  out.style['transform'] = "rotate(" + rotationNum + "deg)";
+  face.style['transform'] = "rotate(" + rotationNum + "deg)";
+  inner.style['transform'] = "rotate(" + rotationNumNeg + "deg)";
+  setTimeout(outInterval, 10);
+}
+function slowRotation() {
+  logo.classList.add('ready');
+  if (!goTo) {
+    if (rotationNum > 0) {
+      goTo = Math.ceil(rotationNum / 360) * 360;
+    } else if (rotationNum < 0) {
+      goTo = Math.floor(rotationNum / 360) * 360;
+    } else {
+      goTo = 360;
+    }
+  }
+  if (rotationNum != goTo) {
+    var change = Math.min((goTo - rotationNum) * 0.05, 7);
+    rotationNum += change;
+    rotationNumNeg += -change;
+    if (Math.abs(rotationNum - goTo) < 1) {
+      out.style['transform'] = "rotate(" + rotationNum + "deg)";
+      inner.style['transform'] = "rotate(" + rotationNumNeg + "deg)";
+      face.style['transform'] = "rotate(" + rotationNum + "deg)";
+    } else {
+      out.style['transform'] = "rotate(" + rotationNum + "deg)";
+      face.style['transform'] = "rotate(" + rotationNum + "deg)";
+      inner.style['transform'] = "rotate(" + rotationNumNeg + "deg)";
+      setTimeout(slowRotation, 10);
+    }
+  }
+}
+function pageLoaded() {
+  loaded = true;
+  slowRotation();
+}
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = preloader;
+
+var _loader = require("./loader");
+
 function preloader() {
+  (0, _loader.outInterval)();
   var video = document.getElementById("background-video");
+  var loader = document.querySelector(".loader");
   var videowrap = document.getElementById("background-video-wrap");
   var url = video.src;
   var xhr = new XMLHttpRequest();
@@ -44,9 +108,17 @@ function preloader() {
   xhr.onload = function (oEvent) {
     var blob = new Blob([oEvent.target.response], { type: "video/mp4" });
     video.src = URL.createObjectURL(blob);
-    videowrap.classList.add("loaded");
+    (0, _loader.pageLoaded)();
+    setTimeout(loadClassLoader, 2000);
+    setTimeout(loadClassVideo, 3000);
+    function loadClassVideo() {
+      videowrap.classList.add("loaded");
+    }
+    function loadClassLoader() {
+      loader.classList.add("vid-loaded");
+    }
   };
   xhr.send();
 }
 
-},{}]},{},[1]);
+},{"./loader":3}]},{},[1]);
