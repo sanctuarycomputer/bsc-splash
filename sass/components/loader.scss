@@ -7,6 +7,7 @@ $anim-speed: 4.250s;
   z-index: 5;
   position: absolute;
   align-items:center;
+  transition: 400ms 400ms opacity ease-in-out;;
   .loader-graphic{
     width:300px;
     height:300px;
@@ -38,12 +39,11 @@ $anim-speed: 4.250s;
       animation: spin $anim-speed ease-in-out 0s infinite normal;
     }
   }
-  @keyframes spin {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
-  }
+  // @keyframes spin {
+  // 0% { transform: rotate(360deg); }
+  // 100% { transform: rotate(0deg); }
+  // }
   &.vid-loaded{
-    transition: 400ms 400ms opacity ease-in-out;;
     transform: rotate(0deg);
     opacity:0;
   }

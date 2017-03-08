@@ -9,9 +9,7 @@ export default function preloader() {
     xhr.onload = function(oEvent) {
       let blob = new Blob([oEvent.target.response], {type: "video/mp4"});
       video.src = URL.createObjectURL(blob);
-      // videowrap.classList.add("loaded")
-      // loader.classList.add("vid-loaded")
-      loadClassLoader();
+      //loadClassLoader();
       setTimeout(loadClassVideo,1000);
       function loadClassVideo(){
         videowrap.classList.add("loaded")
