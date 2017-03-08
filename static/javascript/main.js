@@ -12,7 +12,6 @@ var _preloader2 = _interopRequireDefault(_preloader);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  // loader();
   (0, _preloader2.default)();
   (0, _initCoverVideo2.default)();
 });
