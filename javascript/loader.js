@@ -12,14 +12,8 @@ export function outInterval() {
   rotationNum += 6;
   rotationNumNeg += -6;
   out.style['transform'] = "rotate("+rotationNum+"deg)";
-  out.style['webkitTransform'] = "rotate("+rotationNum+"deg)";
-  out.style['mozTransform'] = "rotate("+rotationNum+"deg)";
   face.style['transform'] = "rotate("+rotationNum+"deg)";
-  face.style['webkitTransform'] = "rotate("+rotationNum+"deg)";
-  face.style['mozTransform'] = "rotate("+rotationNum+"deg)";
   inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
-  inner.style['webkitTransform'] = "rotate("+rotationNumNeg+"deg)";
-  inner.style['mozTransform'] = "rotate("+rotationNumNeg+"deg)";
   setTimeout(outInterval, 10);
 }
 export function slowRotation() {
@@ -43,14 +37,8 @@ export function slowRotation() {
       face.style['transform'] = "rotate("+rotationNum+"deg)";
     } else {
       out.style['transform'] = "rotate("+rotationNum+"deg)";
-      out.style['webkitTransform'] = "rotate("+rotationNum+"deg)";
-      out.style['mozTransform'] = "rotate("+rotationNum+"deg)";
       face.style['transform'] = "rotate("+rotationNum+"deg)";
-      face.style['webkitTransform'] = "rotate("+rotationNum+"deg)";
-      face.style['mozTransform'] = "rotate("+rotationNum+"deg)";
       inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
-      inner.style['webkitTransform'] = "rotate("+rotationNumNeg+"deg)";
-      inner.style['mozTransform'] = "rotate("+rotationNumNeg+"deg)";
       setTimeout(slowRotation, 10);
     }
   }
