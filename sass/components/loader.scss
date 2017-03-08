@@ -1,0 +1,61 @@
+.loader{
+  width:100%;
+  height:100%;
+  background-color: white;
+  z-index: 5;
+  position: absolute;
+  align-items:center;
+  .outercircle{
+    width:300px;
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/static/images/bsc-avery-outer-ring.svg');
+    -webkit-animation: spin 20s linear 0s infinite normal;
+    -moz-animation: spin 20s linear 0s infinite normal;
+    -ms-animation: spin 20s linear 0s infinite normal;
+    animation: spin 20s linear 0s infinite normal;
+  }
+  .innercircle{
+    width:300px;
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/static/images/bsc-avery-inner-ring.svg');
+    -webkit-animation: spin 25s linear 0s infinite reverse;
+    -moz-animation: spin 25s linear 0s infinite reverse;
+    -ms-animation: spin 25s linear 0s infinite reverse;
+    animation: spin 25s linear 0s infinite reverse;
+  }
+  .face{
+    width:300px;
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/static/images/bsc-avery-face.svg');
+    -webkit-animation: spin 40s linear 0s infinite reverse;
+    -moz-animation: spin 40s linear 0s infinite reverse;
+    -ms-animation: spin 40s linear 0s infinite reverse;
+    animation: spin 40s linear 0s infinite reverse;
+
+  }
+  @keyframes spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+  }
+  @-webkit-keyframes spin {
+    0% {-webkit-transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); }
+  }
+  @-ms-keyframes spin {
+    0% {-ms-transform: rotate(360deg); }
+    100% { -ms-transform: rotate(0deg); }
+  }
+  @-moz-keyframes spin {
+    0% { -moz-transform: rotate(360deg); }
+    100% { -moz-transform: rotate(0deg); }
+  }
+}

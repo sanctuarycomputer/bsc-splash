@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.18,146.221 C0.18,226.634 65.366,291.82 145.779,291.82 C226.19,291.82 291.377,226.634 291.377,146.221 C291.377,65.81 226.19,0.623 145.779,0.623 C65.366,0.623 0.18,65.81 0.18,146.221 L0.18,146.221 Z" id="path-1"></path>
+        <path d="M145.7785,227.167 C190.1755,227.167 226.1675,191.176 226.1675,146.778 C226.1675,102.381 190.1755,66.39 145.7785,66.39 C101.3815,66.39 65.3895,102.381 65.3895,146.778 C65.3895,191.176 101.3815,227.167 145.7785,227.167" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-3">
+            <g id="Page-1-Copy" transform="translate(4.000000, 4.000000)">
+                <path d="M291.377,146.7785 C291.377,66.3665 226.19,1.1795 145.778,1.1795 C65.367,1.1795 0.18,66.3665 0.18,146.7785 C0.18,227.1905 65.367,292.3765 145.778,292.3765 C226.19,292.3765 291.377,227.1905 291.377,146.7785" id="Fill-1" fill="#FFFFFF"></path>
+                <g id="Group-256" transform="translate(0.000000, 0.557000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-4"></g>
+                    <polygon id="Fill-3" fill="#002FF8" mask="url(#mask-2)" points="-17 1.175 10.15 1.175 10.15 -5.997 -17 -5.997"></polygon>
+                    <polygon id="Fill-5" fill="#002FF8" mask="url(#mask-2)" points="10.157 8.44 37.307 8.44 37.307 1.268 10.157 1.268"></polygon>
+                    <polygon id="Fill-6" fill="#002FF8" mask="url(#mask-2)" points="-17 15.675 10.15 15.675 10.15 8.503 -17 8.503"></polygon>
+                    <polygon id="Fill-7" fill="#002FF8" mask="url(#mask-2)" points="10.157 22.94 37.307 22.94 37.307 15.768 10.157 15.768"></polygon>
+                    <polygon id="Fill-8" fill="#002FF8" mask="url(#mask-2)" points="-17 30.175 10.15 30.175 10.15 23.003 -17 23.003"></polygon>
+                    <polygon id="Fill-9" fill="#002FF8" mask="url(#mask-2)" points="10.157 37.44 37.307 37.44 37.307 30.268 10.157 30.268"></polygon>
+                    <polygon id="Fill-10" fill="#002FF8" mask="url(#mask-2)" points="-17 44.675 10.15 44.675 10.15 37.503 -17 37.503"></polygon>
+                    <polygon id="Fill-11" fill="#002FF8" mask="url(#mask-2)" points="10.157 51.94 37.307 51.94 37.307 44.768 10.157 44.768"></polygon>
+                    <polygon id="Fill-12" fill="#002FF8" mask="url(#mask-2)" points="-17 59.175 10.15 59.175 10.15 52.003 -17 52.003"></polygon>
+                    <polygon id="Fill-13" fill="#002FF8" mask="url(#mask-2)" points="10.157 66.44 37.307 66.44 37.307 59.268 10.157 59.268"></polygon>
+                    <polygon id="Fill-14" fill="#002FF8" mask="url(#mask-2)" points="-17 73.675 10.15 73.675 10.15 66.503 -17 66.503"></polygon>
+                    <polygon id="Fill-15" fill="#002FF8" mask="url(#mask-2)" points="10.157 80.94 37.307 80.94 37.307 73.768 10.157 73.768"></polygon>
+                    <polygon id="Fill-16" fill="#002FF8" mask="url(#mask-2)" points="-17 88.175 10.15 88.175 10.15 81.003 -17 81.003"></polygon>
+                    <polygon id="Fill-17" fill="#002FF8" mask="url(#mask-2)" points="10.157 95.44 37.307 95.44 37.307 88.268 10.157 88.268"></polygon>
+                    <polygon id="Fill-18" fill="#002FF8" mask="url(#mask-2)" points="-17 102.675 10.15 102.675 10.15 95.503 -17 95.503"></polygon>
+                    <polygon id="Fill-19" fill="#002FF8" mask="url(#mask-2)" points="10.157 109.94 37.307 109.94 37.307 102.768 10.157 102.768"></polygon>
+                    <polygon id="Fill-20" fill="#002FF8" mask="url(#mask-2)" points="-17 117.175 10.15 117.175 10.15 110.003 -17 110.003"></polygon>
+                    <polygon id="Fill-21" fill="#002FF8" mask="url(#mask-2)" points="10.157 124.44 37.307 124.44 37.307 117.268 10.157 117.268"></polygon>
+                    <polygon id="Fill-22" fill="#002FF8" mask="url(#mask-2)" points="-17 131.675 10.15 131.675 10.15 124.503 -17 124.503"></polygon>
+                    <polygon id="Fill-23" fill="#002FF8" mask="url(#mask-2)" points="10.157 138.94 37.307 138.94 37.307 131.768 10.157 131.768"></polygon>
+                    <polygon id="Fill-24" fill="#002FF8" mask="url(#mask-2)" points="-17 146.175 10.15 146.175 10.15 139.003 -17 139.003"></polygon>
+                    <polygon id="Fill-25" fill="#002FF8" mask="url(#mask-2)" points="10.157 153.44 37.307 153.44 37.307 146.268 10.157 146.268"></polygon>
+                    <polygon id="Fill-26" fill="#002FF8" mask="url(#mask-2)" points="-17 160.675 10.15 160.675 10.15 153.503 -17 153.503"></polygon>
+                    <polygon id="Fill-27" fill="#002FF8" mask="url(#mask-2)" points="10.157 167.94 37.307 167.94 37.307 160.768 10.157 160.768"></polygon>
+                    <polygon id="Fill-28" fill="#002FF8" mask="url(#mask-2)" points="-17 175.175 10.15 175.175 10.15 168.003 -17 168.003"></polygon>
+                    <polygon id="Fill-29" fill="#002FF8" mask="url(#mask-2)" points="10.157 182.44 37.307 182.44 37.307 175.268 10.157 175.268"></polygon>
+                    <polygon id="Fill-30" fill="#002FF8" mask="url(#mask-2)" points="-17 189.675 10.15 189.675 10.15 182.503 -17 182.503"></polygon>
+                    <polygon id="Fill-31" fill="#002FF8" mask="url(#mask-2)" points="10.157 196.94 37.307 196.94 37.307 189.768 10.157 189.768"></polygon>
+                    <polygon id="Fill-32" fill="#002FF8" mask="url(#mask-2)" points="-17 204.175 10.15 204.175 10.15 197.003 -17 197.003"></polygon>
+                    <polygon id="Fill-33" fill="#002FF8" mask="url(#mask-2)" points="10.157 211.44 37.307 211.44 37.307 204.268 10.157 204.268"></polygon>
+                    <polygon id="Fill-34" fill="#002FF8" mask="url(#mask-2)" points="-17 218.675 10.15 218.675 10.15 211.503 -17 211.503"></polygon>
+                    <polygon id="Fill-35" fill="#002FF8" mask="url(#mask-2)" points="10.157 225.94 37.307 225.94 37.307 218.768 10.157 218.768"></polygon>
+                    <polygon id="Fill-36" fill="#002FF8" mask="url(#mask-2)" points="-17 233.175 10.15 233.175 10.15 226.003 -17 226.003"></polygon>
+                    <polygon id="Fill-37" fill="#002FF8" mask="url(#mask-2)" points="10.157 240.44 37.307 240.44 37.307 233.268 10.157 233.268"></polygon>
+                    <polygon id="Fill-38" fill="#002FF8" mask="url(#mask-2)" points="-17 247.675 10.15 247.675 10.15 240.503 -17 240.503"></polygon>
+                    <polygon id="Fill-39" fill="#002FF8" mask="url(#mask-2)" points="10.157 254.94 37.307 254.94 37.307 247.768 10.157 247.768"></polygon>
+                    <polygon id="Fill-40" fill="#002FF8" mask="url(#mask-2)" points="-17 262.175 10.15 262.175 10.15 255.003 -17 255.003"></polygon>
+                    <polygon id="Fill-41" fill="#002FF8" mask="url(#mask-2)" points="10.157 269.44 37.307 269.44 37.307 262.268 10.157 262.268"></polygon>
+                    <polygon id="Fill-42" fill="#002FF8" mask="url(#mask-2)" points="-17 276.675 10.15 276.675 10.15 269.503 -17 269.503"></polygon>
+                    <polygon id="Fill-43" fill="#002FF8" mask="url(#mask-2)" points="10.157 283.94 37.307 283.94 37.307 276.768 10.157 276.768"></polygon>
+                    <polygon id="Fill-44" fill="#002FF8" mask="url(#mask-2)" points="-17 291.175 10.15 291.175 10.15 284.003 -17 284.003"></polygon>
+                    <polygon id="Fill-45" fill="#002FF8" mask="url(#mask-2)" points="10.157 298.44 37.307 298.44 37.307 291.268 10.157 291.268"></polygon>
+                    <polygon id="Fill-46" fill="#002FF8" mask="url(#mask-2)" points="37.25 1.175 64.4 1.175 64.4 -5.997 37.25 -5.997"></polygon>
+                    <polygon id="Fill-47" fill="#002FF8" mask="url(#mask-2)" points="64.407 8.44 91.557 8.44 91.557 1.268 64.407 1.268"></polygon>
+                    <polygon id="Fill-48" fill="#002FF8" mask="url(#mask-2)" points="37.25 15.675 64.4 15.675 64.4 8.503 37.25 8.503"></polygon>
+                    <polygon id="Fill-49" fill="#002FF8" mask="url(#mask-2)" points="64.407 22.94 91.557 22.94 91.557 15.768 64.407 15.768"></polygon>
+                    <polygon id="Fill-50" fill="#002FF8" mask="url(#mask-2)" points="37.25 30.175 64.4 30.175 64.4 23.003 37.25 23.003"></polygon>
+                    <polygon id="Fill-51" fill="#002FF8" mask="url(#mask-2)" points="64.407 37.44 91.557 37.44 91.557 30.268 64.407 30.268"></polygon>
+                    <polygon id="Fill-52" fill="#002FF8" mask="url(#mask-2)" points="37.25 44.675 64.4 44.675 64.4 37.503 37.25 37.503"></polygon>
+                    <polygon id="Fill-53" fill="#002FF8" mask="url(#mask-2)" points="64.407 51.94 91.557 51.94 91.557 44.768 64.407 44.768"></polygon>
+                    <polygon id="Fill-54" fill="#002FF8" mask="url(#mask-2)" points="37.25 59.175 64.4 59.175 64.4 52.003 37.25 52.003"></polygon>
+                    <polygon id="Fill-55" fill="#002FF8" mask="url(#mask-2)" points="64.407 66.44 91.557 66.44 91.557 59.268 64.407 59.268"></polygon>
+                    <polygon id="Fill-56" fill="#002FF8" mask="url(#mask-2)" points="37.25 73.675 64.4 73.675 64.4 66.503 37.25 66.503"></polygon>
+                    <polygon id="Fill-57" fill="#002FF8" mask="url(#mask-2)" points="64.407 80.94 91.557 80.94 91.557 73.768 64.407 73.768"></polygon>
+                    <polygon id="Fill-58" fill="#002FF8" mask="url(#mask-2)" points="37.25 88.175 64.4 88.175 64.4 81.003 37.25 81.003"></polygon>
+                    <polygon id="Fill-59" fill="#002FF8" mask="url(#mask-2)" points="64.407 95.44 91.557 95.44 91.557 88.268 64.407 88.268"></polygon>
+                    <polygon id="Fill-60" fill="#002FF8" mask="url(#mask-2)" points="37.25 102.675 64.4 102.675 64.4 95.503 37.25 95.503"></polygon>
+                    <polygon id="Fill-61" fill="#002FF8" mask="url(#mask-2)" points="64.407 109.94 91.557 109.94 91.557 102.768 64.407 102.768"></polygon>
+                    <polygon id="Fill-62" fill="#002FF8" mask="url(#mask-2)" points="37.25 117.175 64.4 117.175 64.4 110.003 37.25 110.003"></polygon>
+                    <polygon id="Fill-63" fill="#002FF8" mask="url(#mask-2)" points="64.407 124.44 91.557 124.44 91.557 117.268 64.407 117.268"></polygon>
+                    <polygon id="Fill-64" fill="#002FF8" mask="url(#mask-2)" points="37.25 131.675 64.4 131.675 64.4 124.503 37.25 124.503"></polygon>
+                    <polygon id="Fill-65" fill="#002FF8" mask="url(#mask-2)" points="64.407 138.94 91.557 138.94 91.557 131.768 64.407 131.768"></polygon>
+                    <polygon id="Fill-66" fill="#002FF8" mask="url(#mask-2)" points="37.25 146.175 64.4 146.175 64.4 139.003 37.25 139.003"></polygon>
+                    <polygon id="Fill-67" fill="#002FF8" mask="url(#mask-2)" points="64.407 153.44 91.557 153.44 91.557 146.268 64.407 146.268"></polygon>
+                    <polygon id="Fill-68" fill="#002FF8" mask="url(#mask-2)" points="37.25 160.675 64.4 160.675 64.4 153.503 37.25 153.503"></polygon>
+                    <polygon id="Fill-69" fill="#002FF8" mask="url(#mask-2)" points="64.407 167.94 91.557 167.94 91.557 160.768 64.407 160.768"></polygon>
+                    <polygon id="Fill-70" fill="#002FF8" mask="url(#mask-2)" points="37.25 175.175 64.4 175.175 64.4 168.003 37.25 168.003"></polygon>
+                    <polygon id="Fill-71" fill="#002FF8" mask="url(#mask-2)" points="64.407 182.44 91.557 182.44 91.557 175.268 64.407 175.268"></polygon>
+                    <polygon id="Fill-72" fill="#002FF8" mask="url(#mask-2)" points="37.25 189.675 64.4 189.675 64.4 182.503 37.25 182.503"></polygon>
+                    <polygon id="Fill-73" fill="#002FF8" mask="url(#mask-2)" points="64.407 196.94 91.557 196.94 91.557 189.768 64.407 189.768"></polygon>
+                    <polygon id="Fill-74" fill="#002FF8" mask="url(#mask-2)" points="37.25 204.175 64.4 204.175 64.4 197.003 37.25 197.003"></polygon>
+                    <polygon id="Fill-75" fill="#002FF8" mask="url(#mask-2)" points="64.407 211.44 91.557 211.44 91.557 204.268 64.407 204.268"></polygon>
+                    <polygon id="Fill-76" fill="#002FF8" mask="url(#mask-2)" points="37.25 218.675 64.4 218.675 64.4 211.503 37.25 211.503"></polygon>
+                    <polygon id="Fill-77" fill="#002FF8" mask="url(#mask-2)" points="64.407 225.94 91.557 225.94 91.557 218.768 64.407 218.768"></polygon>
+                    <polygon id="Fill-78" fill="#002FF8" mask="url(#mask-2)" points="37.25 233.175 64.4 233.175 64.4 226.003 37.25 226.003"></polygon>
+                    <polygon id="Fill-79" fill="#002FF8" mask="url(#mask-2)" points="64.407 240.44 91.557 240.44 91.557 233.268 64.407 233.268"></polygon>
+                    <polygon id="Fill-80" fill="#002FF8" mask="url(#mask-2)" points="37.25 247.675 64.4 247.675 64.4 240.503 37.25 240.503"></polygon>
+                    <polygon id="Fill-81" fill="#002FF8" mask="url(#mask-2)" points="64.407 254.94 91.557 254.94 91.557 247.768 64.407 247.768"></polygon>
+                    <polygon id="Fill-82" fill="#002FF8" mask="url(#mask-2)" points="37.25 262.175 64.4 262.175 64.4 255.003 37.25 255.003"></polygon>
+                    <polygon id="Fill-83" fill="#002FF8" mask="url(#mask-2)" points="64.407 269.44 91.557 269.44 91.557 262.268 64.407 262.268"></polygon>
+                    <polygon id="Fill-84" fill="#002FF8" mask="url(#mask-2)" points="37.25 276.675 64.4 276.675 64.4 269.503 37.25 269.503"></polygon>
+                    <polygon id="Fill-85" fill="#002FF8" mask="url(#mask-2)" points="64.407 283.94 91.557 283.94 91.557 276.768 64.407 276.768"></polygon>
+                    <polygon id="Fill-86" fill="#002FF8" mask="url(#mask-2)" points="37.25 291.175 64.4 291.175 64.4 284.003 37.25 284.003"></polygon>
+                    <polygon id="Fill-87" fill="#002FF8" mask="url(#mask-2)" points="64.407 298.44 91.557 298.44 91.557 291.268 64.407 291.268"></polygon>
+                    <polygon id="Fill-88" fill="#002FF8" mask="url(#mask-2)" points="91.5 1.175 118.65 1.175 118.65 -5.997 91.5 -5.997"></polygon>
+                    <polygon id="Fill-89" fill="#002FF8" mask="url(#mask-2)" points="118.657 8.44 145.807 8.44 145.807 1.268 118.657 1.268"></polygon>
+                    <polygon id="Fill-90" fill="#002FF8" mask="url(#mask-2)" points="91.5 15.675 118.65 15.675 118.65 8.503 91.5 8.503"></polygon>
+                    <polygon id="Fill-91" fill="#002FF8" mask="url(#mask-2)" points="118.657 22.94 145.807 22.94 145.807 15.768 118.657 15.768"></polygon>
+                    <polygon id="Fill-92" fill="#002FF8" mask="url(#mask-2)" points="91.5 30.175 118.65 30.175 118.65 23.003 91.5 23.003"></polygon>
+                    <polygon id="Fill-93" fill="#002FF8" mask="url(#mask-2)" points="118.657 37.44 145.807 37.44 145.807 30.268 118.657 30.268"></polygon>
+                    <polygon id="Fill-94" fill="#002FF8" mask="url(#mask-2)" points="91.5 44.675 118.65 44.675 118.65 37.503 91.5 37.503"></polygon>
+                    <polygon id="Fill-95" fill="#002FF8" mask="url(#mask-2)" points="118.657 51.94 145.807 51.94 145.807 44.768 118.657 44.768"></polygon>
+                    <polygon id="Fill-96" fill="#002FF8" mask="url(#mask-2)" points="91.5 59.175 118.65 59.175 118.65 52.003 91.5 52.003"></polygon>
+                    <polygon id="Fill-97" fill="#002FF8" mask="url(#mask-2)" points="118.657 66.44 145.807 66.44 145.807 59.268 118.657 59.268"></polygon>
+                    <polygon id="Fill-98" fill="#002FF8" mask="url(#mask-2)" points="91.5 73.675 118.65 73.675 118.65 66.503 91.5 66.503"></polygon>
+                    <polygon id="Fill-99" fill="#002FF8" mask="url(#mask-2)" points="118.657 80.94 145.807 80.94 145.807 73.768 118.657 73.768"></polygon>
+                    <polygon id="Fill-100" fill="#002FF8" mask="url(#mask-2)" points="91.5 88.175 118.65 88.175 118.65 81.003 91.5 81.003"></polygon>
+                    <polygon id="Fill-101" fill="#002FF8" mask="url(#mask-2)" points="118.657 95.44 145.807 95.44 145.807 88.268 118.657 88.268"></polygon>
+                    <polygon id="Fill-102" fill="#002FF8" mask="url(#mask-2)" points="91.5 102.675 118.65 102.675 118.65 95.503 91.5 95.503"></polygon>
+                    <polygon id="Fill-103" fill="#002FF8" mask="url(#mask-2)" points="118.657 109.94 145.807 109.94 145.807 102.768 118.657 102.768"></polygon>
+                    <polygon id="Fill-104" fill="#002FF8" mask="url(#mask-2)" points="91.5 117.175 118.65 117.175 118.65 110.003 91.5 110.003"></polygon>
+                    <polygon id="Fill-105" fill="#002FF8" mask="url(#mask-2)" points="118.657 124.44 145.807 124.44 145.807 117.268 118.657 117.268"></polygon>
+                    <polygon id="Fill-106" fill="#002FF8" mask="url(#mask-2)" points="91.5 131.675 118.65 131.675 118.65 124.503 91.5 124.503"></polygon>
+                    <polygon id="Fill-107" fill="#002FF8" mask="url(#mask-2)" points="118.657 138.94 145.807 138.94 145.807 131.768 118.657 131.768"></polygon>
+                    <polygon id="Fill-108" fill="#002FF8" mask="url(#mask-2)" points="91.5 146.175 118.65 146.175 118.65 139.003 91.5 139.003"></polygon>
+                    <polygon id="Fill-109" fill="#002FF8" mask="url(#mask-2)" points="118.657 153.44 145.807 153.44 145.807 146.268 118.657 146.268"></polygon>
+                    <polygon id="Fill-110" fill="#002FF8" mask="url(#mask-2)" points="91.5 160.675 118.65 160.675 118.65 153.503 91.5 153.503"></polygon>
+                    <polygon id="Fill-111" fill="#002FF8" mask="url(#mask-2)" points="118.657 167.94 145.807 167.94 145.807 160.768 118.657 160.768"></polygon>
+                    <polygon id="Fill-112" fill="#002FF8" mask="url(#mask-2)" points="91.5 175.175 118.65 175.175 118.65 168.003 91.5 168.003"></polygon>
+                    <polygon id="Fill-113" fill="#002FF8" mask="url(#mask-2)" points="118.657 182.44 145.807 182.44 145.807 175.268 118.657 175.268"></polygon>
+                    <polygon id="Fill-114" fill="#002FF8" mask="url(#mask-2)" points="91.5 189.675 118.65 189.675 118.65 182.503 91.5 182.503"></polygon>
+                    <polygon id="Fill-115" fill="#002FF8" mask="url(#mask-2)" points="118.657 196.94 145.807 196.94 145.807 189.768 118.657 189.768"></polygon>
+                    <polygon id="Fill-116" fill="#002FF8" mask="url(#mask-2)" points="91.5 204.175 118.65 204.175 118.65 197.003 91.5 197.003"></polygon>
+                    <polygon id="Fill-117" fill="#002FF8" mask="url(#mask-2)" points="118.657 211.44 145.807 211.44 145.807 204.268 118.657 204.268"></polygon>
+                    <polygon id="Fill-118" fill="#002FF8" mask="url(#mask-2)" points="91.5 218.675 118.65 218.675 118.65 211.503 91.5 211.503"></polygon>
+                    <polygon id="Fill-119" fill="#002FF8" mask="url(#mask-2)" points="118.657 225.94 145.807 225.94 145.807 218.768 118.657 218.768"></polygon>
+                    <polygon id="Fill-120" fill="#002FF8" mask="url(#mask-2)" points="91.5 233.175 118.65 233.175 118.65 226.003 91.5 226.003"></polygon>
+                    <polygon id="Fill-121" fill="#002FF8" mask="url(#mask-2)" points="118.657 240.44 145.807 240.44 145.807 233.268 118.657 233.268"></polygon>
+                    <polygon id="Fill-122" fill="#002FF8" mask="url(#mask-2)" points="91.5 247.675 118.65 247.675 118.65 240.503 91.5 240.503"></polygon>
+                    <polygon id="Fill-123" fill="#002FF8" mask="url(#mask-2)" points="118.657 254.94 145.807 254.94 145.807 247.768 118.657 247.768"></polygon>
+                    <polygon id="Fill-124" fill="#002FF8" mask="url(#mask-2)" points="91.5 262.175 118.65 262.175 118.65 255.003 91.5 255.003"></polygon>
+                    <polygon id="Fill-125" fill="#002FF8" mask="url(#mask-2)" points="118.657 269.44 145.807 269.44 145.807 262.268 118.657 262.268"></polygon>
+                    <polygon id="Fill-126" fill="#002FF8" mask="url(#mask-2)" points="91.5 276.675 118.65 276.675 118.65 269.503 91.5 269.503"></polygon>
+                    <polygon id="Fill-127" fill="#002FF8" mask="url(#mask-2)" points="118.657 283.94 145.807 283.94 145.807 276.768 118.657 276.768"></polygon>
+                    <polygon id="Fill-128" fill="#002FF8" mask="url(#mask-2)" points="91.5 291.175 118.65 291.175 118.65 284.003 91.5 284.003"></polygon>
+                    <polygon id="Fill-129" fill="#002FF8" mask="url(#mask-2)" points="118.657 298.44 145.807 298.44 145.807 291.268 118.657 291.268"></polygon>
+                    <polygon id="Fill-130" fill="#002FF8" mask="url(#mask-2)" points="145.75 1.175 172.9 1.175 172.9 -5.997 145.75 -5.997"></polygon>
+                    <polygon id="Fill-131" fill="#002FF8" mask="url(#mask-2)" points="172.907 8.44 200.057 8.44 200.057 1.268 172.907 1.268"></polygon>
+                    <polygon id="Fill-132" fill="#002FF8" mask="url(#mask-2)" points="145.75 15.675 172.9 15.675 172.9 8.503 145.75 8.503"></polygon>
+                    <polygon id="Fill-133" fill="#002FF8" mask="url(#mask-2)" points="172.907 22.94 200.057 22.94 200.057 15.768 172.907 15.768"></polygon>
+                    <polygon id="Fill-134" fill="#002FF8" mask="url(#mask-2)" points="145.75 30.175 172.9 30.175 172.9 23.003 145.75 23.003"></polygon>
+                    <polygon id="Fill-135" fill="#002FF8" mask="url(#mask-2)" points="172.907 37.44 200.057 37.44 200.057 30.268 172.907 30.268"></polygon>
+                    <polygon id="Fill-136" fill="#002FF8" mask="url(#mask-2)" points="145.75 44.675 172.9 44.675 172.9 37.503 145.75 37.503"></polygon>
+                    <polygon id="Fill-137" fill="#002FF8" mask="url(#mask-2)" points="172.907 51.94 200.057 51.94 200.057 44.768 172.907 44.768"></polygon>
+                    <polygon id="Fill-138" fill="#002FF8" mask="url(#mask-2)" points="145.75 59.175 172.9 59.175 172.9 52.003 145.75 52.003"></polygon>
+                    <polygon id="Fill-139" fill="#002FF8" mask="url(#mask-2)" points="172.907 66.44 200.057 66.44 200.057 59.268 172.907 59.268"></polygon>
+                    <polygon id="Fill-140" fill="#002FF8" mask="url(#mask-2)" points="145.75 73.675 172.9 73.675 172.9 66.503 145.75 66.503"></polygon>
+                    <polygon id="Fill-141" fill="#002FF8" mask="url(#mask-2)" points="172.907 80.94 200.057 80.94 200.057 73.768 172.907 73.768"></polygon>
+                    <polygon id="Fill-142" fill="#002FF8" mask="url(#mask-2)" points="145.75 88.175 172.9 88.175 172.9 81.003 145.75 81.003"></polygon>
+                    <polygon id="Fill-143" fill="#002FF8" mask="url(#mask-2)" points="172.907 95.44 200.057 95.44 200.057 88.268 172.907 88.268"></polygon>
+                    <polygon id="Fill-144" fill="#002FF8" mask="url(#mask-2)" points="145.75 102.675 172.9 102.675 172.9 95.503 145.75 95.503"></polygon>
+                    <polygon id="Fill-145" fill="#002FF8" mask="url(#mask-2)" points="172.907 109.94 200.057 109.94 200.057 102.768 172.907 102.768"></polygon>
+                    <polygon id="Fill-146" fill="#002FF8" mask="url(#mask-2)" points="145.75 117.175 172.9 117.175 172.9 110.003 145.75 110.003"></polygon>
+                    <polygon id="Fill-147" fill="#002FF8" mask="url(#mask-2)" points="172.907 124.44 200.057 124.44 200.057 117.268 172.907 117.268"></polygon>
+                    <polygon id="Fill-148" fill="#002FF8" mask="url(#mask-2)" points="145.75 131.675 172.9 131.675 172.9 124.503 145.75 124.503"></polygon>
+                    <polygon id="Fill-149" fill="#002FF8" mask="url(#mask-2)" points="172.907 138.94 200.057 138.94 200.057 131.768 172.907 131.768"></polygon>
+                    <polygon id="Fill-150" fill="#002FF8" mask="url(#mask-2)" points="145.75 146.175 172.9 146.175 172.9 139.003 145.75 139.003"></polygon>
+                    <polygon id="Fill-151" fill="#002FF8" mask="url(#mask-2)" points="172.907 153.44 200.057 153.44 200.057 146.268 172.907 146.268"></polygon>
+                    <polygon id="Fill-152" fill="#002FF8" mask="url(#mask-2)" points="145.75 160.675 172.9 160.675 172.9 153.503 145.75 153.503"></polygon>
+                    <polygon id="Fill-153" fill="#002FF8" mask="url(#mask-2)" points="172.907 167.94 200.057 167.94 200.057 160.768 172.907 160.768"></polygon>
+                    <polygon id="Fill-154" fill="#002FF8" mask="url(#mask-2)" points="145.75 175.175 172.9 175.175 172.9 168.003 145.75 168.003"></polygon>
+                    <polygon id="Fill-155" fill="#002FF8" mask="url(#mask-2)" points="172.907 182.44 200.057 182.44 200.057 175.268 172.907 175.268"></polygon>
+                    <polygon id="Fill-156" fill="#002FF8" mask="url(#mask-2)" points="145.75 189.675 172.9 189.675 172.9 182.503 145.75 182.503"></polygon>
+                    <polygon id="Fill-157" fill="#002FF8" mask="url(#mask-2)" points="172.907 196.94 200.057 196.94 200.057 189.768 172.907 189.768"></polygon>
+                    <polygon id="Fill-158" fill="#002FF8" mask="url(#mask-2)" points="145.75 204.175 172.9 204.175 172.9 197.003 145.75 197.003"></polygon>
+                    <polygon id="Fill-159" fill="#002FF8" mask="url(#mask-2)" points="172.907 211.44 200.057 211.44 200.057 204.268 172.907 204.268"></polygon>
+                    <polygon id="Fill-160" fill="#002FF8" mask="url(#mask-2)" points="145.75 218.675 172.9 218.675 172.9 211.503 145.75 211.503"></polygon>
+                    <polygon id="Fill-161" fill="#002FF8" mask="url(#mask-2)" points="172.907 225.94 200.057 225.94 200.057 218.768 172.907 218.768"></polygon>
+                    <polygon id="Fill-162" fill="#002FF8" mask="url(#mask-2)" points="145.75 233.175 172.9 233.175 172.9 226.003 145.75 226.003"></polygon>
+                    <polygon id="Fill-163" fill="#002FF8" mask="url(#mask-2)" points="172.907 240.44 200.057 240.44 200.057 233.268 172.907 233.268"></polygon>
+                    <polygon id="Fill-164" fill="#002FF8" mask="url(#mask-2)" points="145.75 247.675 172.9 247.675 172.9 240.503 145.75 240.503"></polygon>
+                    <polygon id="Fill-165" fill="#002FF8" mask="url(#mask-2)" points="172.907 254.94 200.057 254.94 200.057 247.768 172.907 247.768"></polygon>
+                    <polygon id="Fill-166" fill="#002FF8" mask="url(#mask-2)" points="145.75 262.175 172.9 262.175 172.9 255.003 145.75 255.003"></polygon>
+                    <polygon id="Fill-167" fill="#002FF8" mask="url(#mask-2)" points="172.907 269.44 200.057 269.44 200.057 262.268 172.907 262.268"></polygon>
+                    <polygon id="Fill-168" fill="#002FF8" mask="url(#mask-2)" points="145.75 276.675 172.9 276.675 172.9 269.503 145.75 269.503"></polygon>
+                    <polygon id="Fill-169" fill="#002FF8" mask="url(#mask-2)" points="172.907 283.94 200.057 283.94 200.057 276.768 172.907 276.768"></polygon>
+                    <polygon id="Fill-170" fill="#002FF8" mask="url(#mask-2)" points="145.75 291.175 172.9 291.175 172.9 284.003 145.75 284.003"></polygon>
+                    <polygon id="Fill-171" fill="#002FF8" mask="url(#mask-2)" points="172.907 298.44 200.057 298.44 200.057 291.268 172.907 291.268"></polygon>
+                    <polygon id="Fill-172" fill="#002FF8" mask="url(#mask-2)" points="200 1.175 227.15 1.175 227.15 -5.997 200 -5.997"></polygon>
+                    <polygon id="Fill-173" fill="#002FF8" mask="url(#mask-2)" points="227.157 8.44 254.307 8.44 254.307 1.268 227.157 1.268"></polygon>
+                    <polygon id="Fill-174" fill="#002FF8" mask="url(#mask-2)" points="200 15.675 227.15 15.675 227.15 8.503 200 8.503"></polygon>
+                    <polygon id="Fill-175" fill="#002FF8" mask="url(#mask-2)" points="227.157 22.94 254.307 22.94 254.307 15.768 227.157 15.768"></polygon>
+                    <polygon id="Fill-176" fill="#002FF8" mask="url(#mask-2)" points="200 30.175 227.15 30.175 227.15 23.003 200 23.003"></polygon>
+                    <polygon id="Fill-177" fill="#002FF8" mask="url(#mask-2)" points="227.157 37.44 254.307 37.44 254.307 30.268 227.157 30.268"></polygon>
+                    <polygon id="Fill-178" fill="#002FF8" mask="url(#mask-2)" points="200 44.675 227.15 44.675 227.15 37.503 200 37.503"></polygon>
+                    <polygon id="Fill-179" fill="#002FF8" mask="url(#mask-2)" points="227.157 51.94 254.307 51.94 254.307 44.768 227.157 44.768"></polygon>
+                    <polygon id="Fill-180" fill="#002FF8" mask="url(#mask-2)" points="200 59.175 227.15 59.175 227.15 52.003 200 52.003"></polygon>
+                    <polygon id="Fill-181" fill="#002FF8" mask="url(#mask-2)" points="227.157 66.44 254.307 66.44 254.307 59.268 227.157 59.268"></polygon>
+                    <polygon id="Fill-182" fill="#002FF8" mask="url(#mask-2)" points="200 73.675 227.15 73.675 227.15 66.503 200 66.503"></polygon>
+                    <polygon id="Fill-183" fill="#002FF8" mask="url(#mask-2)" points="227.157 80.94 254.307 80.94 254.307 73.768 227.157 73.768"></polygon>
+                    <polygon id="Fill-184" fill="#002FF8" mask="url(#mask-2)" points="200 88.175 227.15 88.175 227.15 81.003 200 81.003"></polygon>
+                    <polygon id="Fill-185" fill="#002FF8" mask="url(#mask-2)" points="227.157 95.44 254.307 95.44 254.307 88.268 227.157 88.268"></polygon>
+                    <polygon id="Fill-186" fill="#002FF8" mask="url(#mask-2)" points="200 102.675 227.15 102.675 227.15 95.503 200 95.503"></polygon>
+                    <polygon id="Fill-187" fill="#002FF8" mask="url(#mask-2)" points="227.157 109.94 254.307 109.94 254.307 102.768 227.157 102.768"></polygon>
+                    <polygon id="Fill-188" fill="#002FF8" mask="url(#mask-2)" points="200 117.175 227.15 117.175 227.15 110.003 200 110.003"></polygon>
+                    <polygon id="Fill-189" fill="#002FF8" mask="url(#mask-2)" points="227.157 124.44 254.307 124.44 254.307 117.268 227.157 117.268"></polygon>
+                    <polygon id="Fill-190" fill="#002FF8" mask="url(#mask-2)" points="200 131.675 227.15 131.675 227.15 124.503 200 124.503"></polygon>
+                    <polygon id="Fill-191" fill="#002FF8" mask="url(#mask-2)" points="227.157 138.94 254.307 138.94 254.307 131.768 227.157 131.768"></polygon>
+                    <polygon id="Fill-192" fill="#002FF8" mask="url(#mask-2)" points="200 146.175 227.15 146.175 227.15 139.003 200 139.003"></polygon>
+                    <polygon id="Fill-193" fill="#002FF8" mask="url(#mask-2)" points="227.157 153.44 254.307 153.44 254.307 146.268 227.157 146.268"></polygon>
+                    <polygon id="Fill-194" fill="#002FF8" mask="url(#mask-2)" points="200 160.675 227.15 160.675 227.15 153.503 200 153.503"></polygon>
+                    <polygon id="Fill-195" fill="#002FF8" mask="url(#mask-2)" points="227.157 167.94 254.307 167.94 254.307 160.768 227.157 160.768"></polygon>
+                    <polygon id="Fill-196" fill="#002FF8" mask="url(#mask-2)" points="200 175.175 227.15 175.175 227.15 168.003 200 168.003"></polygon>
+                    <polygon id="Fill-197" fill="#002FF8" mask="url(#mask-2)" points="227.157 182.44 254.307 182.44 254.307 175.268 227.157 175.268"></polygon>
+                    <polygon id="Fill-198" fill="#002FF8" mask="url(#mask-2)" points="200 189.675 227.15 189.675 227.15 182.503 200 182.503"></polygon>
+                    <polygon id="Fill-199" fill="#002FF8" mask="url(#mask-2)" points="227.157 196.94 254.307 196.94 254.307 189.768 227.157 189.768"></polygon>
+                    <polygon id="Fill-200" fill="#002FF8" mask="url(#mask-2)" points="200 204.175 227.15 204.175 227.15 197.003 200 197.003"></polygon>
+                    <polygon id="Fill-201" fill="#002FF8" mask="url(#mask-2)" points="227.157 211.44 254.307 211.44 254.307 204.268 227.157 204.268"></polygon>
+                    <polygon id="Fill-202" fill="#002FF8" mask="url(#mask-2)" points="200 218.675 227.15 218.675 227.15 211.503 200 211.503"></polygon>
+                    <polygon id="Fill-203" fill="#002FF8" mask="url(#mask-2)" points="227.157 225.94 254.307 225.94 254.307 218.768 227.157 218.768"></polygon>
+                    <polygon id="Fill-204" fill="#002FF8" mask="url(#mask-2)" points="200 233.175 227.15 233.175 227.15 226.003 200 226.003"></polygon>
+                    <polygon id="Fill-205" fill="#002FF8" mask="url(#mask-2)" points="227.157 240.44 254.307 240.44 254.307 233.268 227.157 233.268"></polygon>
+                    <polygon id="Fill-206" fill="#002FF8" mask="url(#mask-2)" points="200 247.675 227.15 247.675 227.15 240.503 200 240.503"></polygon>
+                    <polygon id="Fill-207" fill="#002FF8" mask="url(#mask-2)" points="227.157 254.94 254.307 254.94 254.307 247.768 227.157 247.768"></polygon>
+                    <polygon id="Fill-208" fill="#002FF8" mask="url(#mask-2)" points="200 262.175 227.15 262.175 227.15 255.003 200 255.003"></polygon>
+                    <polygon id="Fill-209" fill="#002FF8" mask="url(#mask-2)" points="227.157 269.44 254.307 269.44 254.307 262.268 227.157 262.268"></polygon>
+                    <polygon id="Fill-210" fill="#002FF8" mask="url(#mask-2)" points="200 276.675 227.15 276.675 227.15 269.503 200 269.503"></polygon>
+                    <polygon id="Fill-211" fill="#002FF8" mask="url(#mask-2)" points="227.157 283.94 254.307 283.94 254.307 276.768 227.157 276.768"></polygon>
+                    <polygon id="Fill-212" fill="#002FF8" mask="url(#mask-2)" points="200 291.175 227.15 291.175 227.15 284.003 200 284.003"></polygon>
+                    <polygon id="Fill-213" fill="#002FF8" mask="url(#mask-2)" points="227.157 298.44 254.307 298.44 254.307 291.268 227.157 291.268"></polygon>
+                    <polygon id="Fill-214" fill="#002FF8" mask="url(#mask-2)" points="254.25 1.175 281.4 1.175 281.4 -5.997 254.25 -5.997"></polygon>
+                    <polygon id="Fill-215" fill="#002FF8" mask="url(#mask-2)" points="281.407 8.44 308.557 8.44 308.557 1.268 281.407 1.268"></polygon>
+                    <polygon id="Fill-216" fill="#002FF8" mask="url(#mask-2)" points="254.25 15.675 281.4 15.675 281.4 8.503 254.25 8.503"></polygon>
+                    <polygon id="Fill-217" fill="#002FF8" mask="url(#mask-2)" points="281.407 22.94 308.557 22.94 308.557 15.768 281.407 15.768"></polygon>
+                    <polygon id="Fill-218" fill="#002FF8" mask="url(#mask-2)" points="254.25 30.175 281.4 30.175 281.4 23.003 254.25 23.003"></polygon>
+                    <polygon id="Fill-219" fill="#002FF8" mask="url(#mask-2)" points="281.407 37.44 308.557 37.44 308.557 30.268 281.407 30.268"></polygon>
+                    <polygon id="Fill-220" fill="#002FF8" mask="url(#mask-2)" points="254.25 44.675 281.4 44.675 281.4 37.503 254.25 37.503"></polygon>
+                    <polygon id="Fill-221" fill="#002FF8" mask="url(#mask-2)" points="281.407 51.94 308.557 51.94 308.557 44.768 281.407 44.768"></polygon>
+                    <polygon id="Fill-222" fill="#002FF8" mask="url(#mask-2)" points="254.25 59.175 281.4 59.175 281.4 52.003 254.25 52.003"></polygon>
+                    <polygon id="Fill-223" fill="#002FF8" mask="url(#mask-2)" points="281.407 66.44 308.557 66.44 308.557 59.268 281.407 59.268"></polygon>
+                    <polygon id="Fill-224" fill="#002FF8" mask="url(#mask-2)" points="254.25 73.675 281.4 73.675 281.4 66.503 254.25 66.503"></polygon>
+                    <polygon id="Fill-225" fill="#002FF8" mask="url(#mask-2)" points="281.407 80.94 308.557 80.94 308.557 73.768 281.407 73.768"></polygon>
+                    <polygon id="Fill-226" fill="#002FF8" mask="url(#mask-2)" points="254.25 88.175 281.4 88.175 281.4 81.003 254.25 81.003"></polygon>
+                    <polygon id="Fill-227" fill="#002FF8" mask="url(#mask-2)" points="281.407 95.44 308.557 95.44 308.557 88.268 281.407 88.268"></polygon>
+                    <polygon id="Fill-228" fill="#002FF8" mask="url(#mask-2)" points="254.25 102.675 281.4 102.675 281.4 95.503 254.25 95.503"></polygon>
+                    <polygon id="Fill-229" fill="#002FF8" mask="url(#mask-2)" points="281.407 109.94 308.557 109.94 308.557 102.768 281.407 102.768"></polygon>
+                    <polygon id="Fill-230" fill="#002FF8" mask="url(#mask-2)" points="254.25 117.175 281.4 117.175 281.4 110.003 254.25 110.003"></polygon>
+                    <polygon id="Fill-231" fill="#002FF8" mask="url(#mask-2)" points="281.407 124.44 308.557 124.44 308.557 117.268 281.407 117.268"></polygon>
+                    <polygon id="Fill-232" fill="#002FF8" mask="url(#mask-2)" points="254.25 131.675 281.4 131.675 281.4 124.503 254.25 124.503"></polygon>
+                    <polygon id="Fill-233" fill="#002FF8" mask="url(#mask-2)" points="281.407 138.94 308.557 138.94 308.557 131.768 281.407 131.768"></polygon>
+                    <polygon id="Fill-234" fill="#002FF8" mask="url(#mask-2)" points="254.25 146.175 281.4 146.175 281.4 139.003 254.25 139.003"></polygon>
+                    <polygon id="Fill-235" fill="#002FF8" mask="url(#mask-2)" points="281.407 153.44 308.557 153.44 308.557 146.268 281.407 146.268"></polygon>
+                    <polygon id="Fill-236" fill="#002FF8" mask="url(#mask-2)" points="254.25 160.675 281.4 160.675 281.4 153.503 254.25 153.503"></polygon>
+                    <polygon id="Fill-237" fill="#002FF8" mask="url(#mask-2)" points="281.407 167.94 308.557 167.94 308.557 160.768 281.407 160.768"></polygon>
+                    <polygon id="Fill-238" fill="#002FF8" mask="url(#mask-2)" points="254.25 175.175 281.4 175.175 281.4 168.003 254.25 168.003"></polygon>
+                    <polygon id="Fill-239" fill="#002FF8" mask="url(#mask-2)" points="281.407 182.44 308.557 182.44 308.557 175.268 281.407 175.268"></polygon>
+                    <polygon id="Fill-240" fill="#002FF8" mask="url(#mask-2)" points="254.25 189.675 281.4 189.675 281.4 182.503 254.25 182.503"></polygon>
+                    <polygon id="Fill-241" fill="#002FF8" mask="url(#mask-2)" points="281.407 196.94 308.557 196.94 308.557 189.768 281.407 189.768"></polygon>
+                    <polygon id="Fill-242" fill="#002FF8" mask="url(#mask-2)" points="254.25 204.175 281.4 204.175 281.4 197.003 254.25 197.003"></polygon>
+                    <polygon id="Fill-243" fill="#002FF8" mask="url(#mask-2)" points="281.407 211.44 308.557 211.44 308.557 204.268 281.407 204.268"></polygon>
+                    <polygon id="Fill-244" fill="#002FF8" mask="url(#mask-2)" points="254.25 218.675 281.4 218.675 281.4 211.503 254.25 211.503"></polygon>
+                    <polygon id="Fill-245" fill="#002FF8" mask="url(#mask-2)" points="281.407 225.94 308.557 225.94 308.557 218.768 281.407 218.768"></polygon>
+                    <polygon id="Fill-246" fill="#002FF8" mask="url(#mask-2)" points="254.25 233.175 281.4 233.175 281.4 226.003 254.25 226.003"></polygon>
+                    <polygon id="Fill-247" fill="#002FF8" mask="url(#mask-2)" points="281.407 240.44 308.557 240.44 308.557 233.268 281.407 233.268"></polygon>
+                    <polygon id="Fill-248" fill="#002FF8" mask="url(#mask-2)" points="254.25 247.675 281.4 247.675 281.4 240.503 254.25 240.503"></polygon>
+                    <polygon id="Fill-249" fill="#002FF8" mask="url(#mask-2)" points="281.407 254.94 308.557 254.94 308.557 247.768 281.407 247.768"></polygon>
+                    <polygon id="Fill-250" fill="#002FF8" mask="url(#mask-2)" points="254.25 262.175 281.4 262.175 281.4 255.003 254.25 255.003"></polygon>
+                    <polygon id="Fill-251" fill="#002FF8" mask="url(#mask-2)" points="281.407 269.44 308.557 269.44 308.557 262.268 281.407 262.268"></polygon>
+                    <polygon id="Fill-252" fill="#002FF8" mask="url(#mask-2)" points="254.25 276.675 281.4 276.675 281.4 269.503 254.25 269.503"></polygon>
+                    <polygon id="Fill-253" fill="#002FF8" mask="url(#mask-2)" points="281.407 283.94 308.557 283.94 308.557 276.768 281.407 276.768"></polygon>
+                    <polygon id="Fill-254" fill="#002FF8" mask="url(#mask-2)" points="254.25 291.175 281.4 291.175 281.4 284.003 254.25 284.003"></polygon>
+                    <polygon id="Fill-255" fill="#002FF8" mask="url(#mask-2)" points="281.407 298.44 308.557 298.44 308.557 291.268 281.407 291.268"></polygon>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

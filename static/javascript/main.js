@@ -9,14 +9,19 @@ var _preloader = require('./preloader');
 
 var _preloader2 = _interopRequireDefault(_preloader);
 
+var _loader = require('./loader');
+
+var _loader2 = _interopRequireDefault(_loader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
+  (0, _loader2.default)();
   (0, _preloader2.default)();
   (0, _initCoverVideo2.default)();
 });
 
-},{"./initCoverVideo":2,"./preloader":3}],2:[function(require,module,exports){
+},{"./initCoverVideo":2,"./loader":3,"./preloader":4}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28,6 +33,15 @@ function initCoverVideo() {
 }
 
 },{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = loader;
+function loader() {}
+
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

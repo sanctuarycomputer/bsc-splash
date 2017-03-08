@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: 'BebasNeueBold';
+  src: url('/static/fonts/BebasNeueBold.eot');
+  src: url('/static/fonts/BebasNeueBold.woff2') format('woff2'),
+       url('/static/fonts/BebasNeueBold.woff') format('woff'),
+       url('/static/fonts/BebasNeueBold.ttf') format('truetype'),
+       url('/static/fonts/BebasNeueBold.svg#BebasNeueBold') format('svg'),
+       url('/static/fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+$bebas: "BebasNeueBold", sans-serif;
+
+.bebas{
+  font-family: $bebas;
+  text-transform: uppercase;
+}
