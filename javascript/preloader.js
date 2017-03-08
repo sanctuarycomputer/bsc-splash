@@ -1,4 +1,7 @@
+import { outInterval, pageLoaded }  from './loader';
+
 export default function preloader() {
+  outInterval();
   let video = document.getElementById("background-video")
   let loader = document.querySelector(".loader")
   let videowrap = document.getElementById("background-video-wrap")
@@ -9,8 +12,9 @@ export default function preloader() {
     xhr.onload = function(oEvent) {
       let blob = new Blob([oEvent.target.response], {type: "video/mp4"});
       video.src = URL.createObjectURL(blob);
-      //loadClassLoader();
-      setTimeout(loadClassVideo,1000);
+      pageLoaded();
+      setTimeout(loadClassLoader,2000);
+      setTimeout(loadClassVideo,3000);
       function loadClassVideo(){
         videowrap.classList.add("loaded")
       }
