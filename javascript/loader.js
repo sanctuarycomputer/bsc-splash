@@ -1,11 +1,11 @@
-let logo = document.querySelector('.loader');
+const logo = document.querySelector('.loader');
 let loaded = false;
 let rotationNum = 0;
 let rotationNumNeg = 0;
 let goTo = null;
-let out = document.getElementById("out");
-let inner = document.getElementById("in");
-let face = document.getElementById("face");
+const out = document.getElementById("out");
+const inner = document.getElementById("in");
+const face = document.getElementById("face");
 
 export function outInterval() {
   if (loaded) return;
