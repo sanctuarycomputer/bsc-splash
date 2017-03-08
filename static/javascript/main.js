@@ -50,6 +50,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = preloader;
 function preloader() {
   var video = document.getElementById("background-video");
+  var loader = document.querySelector(".loader");
   var videowrap = document.getElementById("background-video-wrap");
   var url = video.src;
   var xhr = new XMLHttpRequest();
@@ -58,7 +59,16 @@ function preloader() {
   xhr.onload = function (oEvent) {
     var blob = new Blob([oEvent.target.response], { type: "video/mp4" });
     video.src = URL.createObjectURL(blob);
-    videowrap.classList.add("loaded");
+    // videowrap.classList.add("loaded")
+    // loader.classList.add("vid-loaded")
+    loadClassLoader();
+    setTimeout(loadClassVideo, 1000);
+    function loadClassVideo() {
+      videowrap.classList.add("loaded");
+    }
+    function loadClassLoader() {
+      loader.classList.add("vid-loaded");
+    }
   };
   xhr.send();
 }

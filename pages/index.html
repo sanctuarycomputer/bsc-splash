@@ -10,8 +10,8 @@
 {% block content %}
 
 {% include "templates/partials/loader.html" %}
-
-<div class="content-container fixed flex-column justify-center flex ">
+<div id="background-video-wrap">
+<div class="content-container fixed flex-column justify-center flex">
   <div class="content flex-column flex mx-auto justify-center">
     <div class="logo mx-auto">
       <img src="static/images/logo.png"/>
@@ -33,11 +33,11 @@
   </div>
 </div>
 
-<div class="covervid-wrapper" id="background-video-wrap">
+<div class="covervid-wrapper" >
     <video class="covervid-video" autoplay loop poster="static/videos/gilmore.gif">
         <source src="static/videos/large.mp4" id="background-video" type="video/webm">
     </video>
 </div>
-
+</div>
 
 {% endblock %}

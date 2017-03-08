@@ -7,36 +7,44 @@ $anim-speed: 4.250s;
   z-index: 5;
   position: absolute;
   align-items:center;
-  .outercircle{
+  .loader-graphic{
     width:300px;
     height:300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/static/images/bsc-avery-outer-ring.svg');
-    animation: spin $anim-speed ease-in-out 0s infinite normal;
-  }
-  .innercircle{
-    width:300px;
-    height:300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/static/images/bsc-avery-inner-ring.svg');
-    animation: spin $anim-speed ease-in-out 0s infinite reverse;
-  }
-  .face{
-    width:300px;
-    height:300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/static/images/bsc-avery-face.svg');
-    animation: spin $anim-speed ease-in-out 0s infinite normal;
-
+    .outercircle{
+      width:300px;
+      height:300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url('/static/images/bsc-avery-outer-ring.svg');
+      animation: spin $anim-speed ease-in-out 0s infinite normal;
+    }
+    .innercircle{
+      width:300px;
+      height:300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url('/static/images/bsc-avery-inner-ring.svg');
+      animation: spin $anim-speed ease-in-out 0s infinite reverse;
+    }
+    .face{
+      width:300px;
+      height:300px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url('/static/images/bsc-avery-face.svg');
+      animation: spin $anim-speed ease-in-out 0s infinite normal;
+    }
   }
   @keyframes spin {
   0% { transform: rotate(360deg); }
   100% { transform: rotate(0deg); }
+  }
+  &.vid-loaded{
+    transition: 400ms 400ms opacity ease-in-out;;
+    transform: rotate(0deg);
+    opacity:0;
   }
 }
