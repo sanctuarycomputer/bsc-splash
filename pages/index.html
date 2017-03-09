@@ -9,21 +9,16 @@
 
 {% block content %}
 
-{% include "templates/partials/loader.html" %}
 <div id="background-video-wrap">
-  <div class="content-container px1 absolute flex-column content-center flex">
-    <div class="content col lg-col-9 md-col-11 sm-col-12 flex-column flex mx-auto justify-center relative ">
-      <div class="logo content-center my2 mx-auto">
-        <img class="mx-auto" src="static/images/slack-imgs.jpg"/>
-      </div>
-      <div class="copy my3 mx-auto">
-        <p class="blue my1 large bebas center">
+  <div class="content-container py3 px1 absolute flex content-center">
+    <div class="content flex-column flex justify-around">
+      <img class="mx-auto" src="static/images/slack-imgs.jpg"/>
+      <p class="blue my1 large copy mx-auto bebas center">
         BAKING INGREDIENTS SHIPPED TO YOUR DOOR<br>
         DESIGNED TO TASTE GREAT WITH "HERBAL" BUTTERS<br>
         TOTALLY GLUTEN FREE AND GOOD FOR YOU
-        </p>
-      </div>
-      <form class="email mb3 col lg-col-9 md-col-8 sm-col-8 mx-auto mailchimp-form flex-column flex">
+      </p>
+      <form class="email mx-auto mailchimp-form flex-column flex">
        <input id='email' class='border-radius mx-auto center bebas large input mb2' placeholder='HIGH@ON-BAKED-EDIBLES.COM' type='email'>
        <button type='submit' class='border-radius mx-auto center bebas pink large mb1 button'><p>GIVE ME THEM UPDATES</p></button>
        <label><p class='label center medium bebas blue'>( SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE )</p></label>
@@ -36,5 +31,6 @@
       </video>
   </div>
 </div>
+{% include "templates/partials/loader.html" %}
 
 {% endblock %}
