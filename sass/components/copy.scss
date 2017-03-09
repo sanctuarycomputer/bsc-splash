@@ -1,7 +1,51 @@
-.copy {
-  p{
-    line-height: 50px;
+.large{
+  font-size:2.75rem;
+  line-height: 4.5rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  @media (max-width:58em) {
+    font-size:2.25rem;
+    line-height: 3.5rem;
+    word-spacing: 4px;
+  }
+  @media (max-width:40em) {
+    font-size:1.75rem;
+    line-height: 3rem;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+  }
+  @media (max-width:24em) {
+    font-size:1.25rem;
+    line-height: 2rem;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+  }
+}
+.medium{
+  font-size:2rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  @media (max-width:72em) {
+    font-size:1.75rem;
+    line-height: 3.5rem;
     letter-spacing: 1px;
     word-spacing: 2px;
+  }
+  @media (max-width:58em) {
+    font-size:1.5rem;
+    line-height: 3.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+  @media (max-width:40em) {
+    font-size:1.25rem;
+    line-height: 2.5rem;
+    letter-spacing: .5px;
+    word-spacing: 1px;
+  }
+  @media (max-width:24em) {
+    font-size:1rem;
+    line-height: 2.5rem;
   }
 }

@@ -8,6 +8,7 @@
 @import 'components/email';
 @import 'components/copy';
 @import 'components/loader';
+@import 'components/logo';
 
 html,body {
   width:100%;
@@ -18,4 +19,5 @@ html,body {
 * {
   margin:0;
   padding:0;
+  box-sizing: border-box;
 }
