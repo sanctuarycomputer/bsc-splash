@@ -1,26 +1,36 @@
 .email{
-  width: 100%;
+  z-index:10;
   .border-radius{
     border-radius: 15px;
     border: 5px solid $blue;
     width:100%;
-  }
-  .input{
-    background-color: transparent;
+    height:100%;
+    max-width: 650px;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    line-height: normal;
+    @media (max-width:40em) {
+      border-radius: 10px;
+      border: 3px solid $blue;
+    }
   }
   .button{
     background-color: $blue;
   }
+  input{
+    background-color: transparent;
+  }
   ::-webkit-input-placeholder {
       color: $blue;
+      opacity:.75;
   }
   :-moz-placeholder {
      color:    $blue;
-     opacity:  1;
+     opacity:.75;
   }
   ::-moz-placeholder {
      color:   $blue;
-     opacity:  1;
+     opacity:.75;
   }
   :-ms-input-placeholder {
      color:    $blue;

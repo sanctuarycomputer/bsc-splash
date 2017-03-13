@@ -24,7 +24,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = initCoverVideo;
 function initCoverVideo() {
-  $('.covervid-video').coverVid(600, 454);
+  $('.covervid-video').coverVid(1920, 1080);
 }
 
 },{}],3:[function(require,module,exports){

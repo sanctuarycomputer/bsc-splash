@@ -8,36 +8,29 @@
 {% block title %}{% parent %} - Homepage{% endblock %}
 
 {% block content %}
-
 {% include "templates/partials/loader.html" %}
-<div id="background-video-wrap">
-<div class="content-container fixed flex-column justify-center flex">
-  <div class="content flex-column flex mx-auto justify-center">
-    <div class="logo mx-auto">
-      <img src="static/images/logo.png"/>
-    </div>
-    <div class="copy my3 mx-auto">
-      <p class="h1 blue bebas center">
-      BAKING INGREDIENTS SHIPPED TO YOUR DOOR<br>
-      DESIGNED TO TASTE GREAT WITH "HERBAL" BUTTERS<br>
-      TOTALLY GLUTEN FREE AND GOOD FOR YOU
+
+<div id="background-video-wrap" class='fixed' style='height: 100%; width:100%'>
+  <div class="content-container py3 px1 relative flex content-center" style="overflow: scroll">
+    <div class="content flex-column flex justify-around">
+      <div class="logo mx-auto"></div>
+      <p class="blue my1 large copy mx-auto bebas center">
+        BAKING INGREDIENTS SHIPPED TO YOUR DOOR<br>
+        DESIGNED TO TASTE GREAT WITH "HERB<span class='herb'>A</span>L" BUTTERS<br>
+        TOTALLY GLUTEN FREE AND GOOD FOR YOU
       </p>
-    </div>
-    <div class="email mx-auto">
-      <form class="mailchimp-form flex-column flex">
-       <input id='email' class='border-radius mx-auto h1 center py2 my1 bebas input' placeholder='HIGH@ON-BAKED-EDIBLES.COM' type='email'>
-       <button type='submit' class='border-radius mx-auto h1 center bebas pink py2 my1 button'><p>GIVE ME THEM UPDATES</p></button>
-       <label><p class='center copy h2 bebas blue my1'>( SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE )</p></label>
+      <form class="email mb2 mx-auto mailchimp-form">
+       <input id='email' class='border-radius mx-auto center bebas large input mb2' placeholder='HIGH@ON-BAKED-EDIBLES.COM' type='email'>
+       <button type='submit' class='border-radius mx-auto center bebas pink large mb1 button block'>GIVE ME THEM UPDATES</button>
+       <label class='label center medium bebas blue'>( SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE )</label>
      </form>
     </div>
   </div>
-</div>
-
-<div class="covervid-wrapper" >
-    <video class="covervid-video" autoplay loop poster="static/videos/gilmore.gif">
+  <div class="covervid-wrapper" >
+    <video class="covervid-video" autoplay loop poster="static/videos/girlgilmore.gif">
         <source src="static/videos/large.mp4" id="background-video" type="video/webm">
     </video>
-</div>
+  </div>
 </div>
 
 {% endblock %}

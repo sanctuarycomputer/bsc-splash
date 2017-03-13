@@ -1,4 +1,4 @@
 
 export default function initCoverVideo(){
-  $('.covervid-video').coverVid(600, 454);
+  $('.covervid-video').coverVid(1920, 1080);
 }
