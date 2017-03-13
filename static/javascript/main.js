@@ -138,9 +138,9 @@ function preloader() {
     (0, _loader.pageLoaded)().then(function () {
       loader.classList.add('vid-loaded');
       introVideoWrap.classList.add('loaded');
-      loopVideoWrap.classList.add('loaded');
       (0, _utils.playVideoElement)(introVideoElement).then(function () {
         introVideoFinished = true;
+        loopVideoWrap.classList.add('loaded');
         introVideoWrap.classList.remove('loaded');
         maybeStartVideoLoop();
         content.classList.add('loaded');
