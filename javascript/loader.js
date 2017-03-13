@@ -1,4 +1,6 @@
-const logo = document.querySelector('.loader');
+import Promise from 'es6-promise';
+
+const loader = document.querySelector('.loader');
 let loaded = false;
 let rotationNum = 0;
 let rotationNumNeg = 0;
@@ -16,8 +18,8 @@ export function outInterval() {
   inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
   setTimeout(outInterval, 10);
 }
-export function slowRotation() {
-  logo.classList.add('ready');
+function slowRotation(callback) {
+  loader.classList.add('ready');
   if(!goTo) {
     if (rotationNum > 0) {
       goTo = Math.ceil(rotationNum/360) * 360;
@@ -35,15 +37,20 @@ export function slowRotation() {
       out.style['transform'] = "rotate("+rotationNum+"deg)";
       inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
       face.style['transform'] = "rotate("+rotationNum+"deg)";
+      callback();
     } else {
       out.style['transform'] = "rotate("+rotationNum+"deg)";
       face.style['transform'] = "rotate("+rotationNum+"deg)";
       inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
-      setTimeout(slowRotation, 10);
+      setTimeout(function() {
+        slowRotation(callback)
+      }, 10);
     }
   }
 }
  export function pageLoaded() {
   loaded = true;
-  slowRotation();
+  return new Promise((resolve) => {
+    slowRotation(resolve);
+  });
 }

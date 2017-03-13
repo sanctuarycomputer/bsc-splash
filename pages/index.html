@@ -1,17 +1,11 @@
-{# ------------------------------------------------------- #}
-
-{# YOUR HOMEPAGE #}
-
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
 {% block title %}{% parent %} - Homepage{% endblock %}
 
 {% block content %}
 {% include "templates/partials/loader.html" %}
-
-<div id="background-video-wrap" class='fixed' style='height: 100%; width:100%'>
-  <div class="content-container py3 px1 relative flex content-center" style="overflow: scroll">
+<div class='fixed' style='height: 100%; width:100%'>
+  <div class="content-container py3 px1 relative flex content-center" id="content-wrap" style="overflow: scroll">
     <div class="content flex-column flex justify-around">
       <div class="logo mx-auto"></div>
       <p class="blue my1 large copy mx-auto bebas center">
@@ -26,11 +20,15 @@
      </form>
     </div>
   </div>
-  <div class="covervid-wrapper" >
-    <video class="covervid-video" autoplay loop poster="static/videos/girlgilmore.gif">
-        <source src="static/videos/large.mp4" id="background-video" type="video/webm">
+  <div class="covervid-wrapper" id="background-video-wrap-loop">
+    <video class="covervid-video-loop" id="video-element-loop" loop poster="static/images/BSC_POSTER.jpg">
+      <source src="static/videos/BSC_LOOP.mp4" id="background-video-loop" type="video/webm">
+    </video>
+  </div>
+  <div class="covervid-wrapper" id="background-video-wrap-intro">
+    <video class="covervid-video-intro" id="video-element-intro" poster="static/images/BSC_POSTER.jpg">
+      <source src="static/videos/BSC_INTRO.mp4" id="background-video-intro" type="video/webm">
     </video>
   </div>
 </div>
-
 {% endblock %}
