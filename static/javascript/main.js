@@ -5,13 +5,24 @@ var _preloader = require('./preloader');
 
 var _preloader2 = _interopRequireDefault(_preloader);
 
+var _mobilePreloader = require('./mobilePreloader');
+
+var _mobilePreloader2 = _interopRequireDefault(_mobilePreloader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  (0, _preloader2.default)();
+  var isTouchDevice = 'ontouchstart' in document.documentElement;
+  if (isTouchDevice) {
+    console.log(isTouchDevice);
+
+    (0, _mobilePreloader2.default)();
+  } else {
+    (0, _preloader2.default)();
+  }
 });
 
-},{"./preloader":4}],2:[function(require,module,exports){
+},{"./mobilePreloader":4,"./preloader":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -93,7 +104,30 @@ function pageLoaded() {
   });
 }
 
-},{"es6-promise":6}],4:[function(require,module,exports){
+},{"es6-promise":7}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = mobilePreloader;
+
+var _loader = require("./loader");
+
+var loader = document.querySelector(".loader");
+var content = document.getElementById("content-wrap");
+var loopVideoWrap = document.getElementById("background-video-wrap-loop");
+
+function mobilePreloader() {
+  (0, _loader.outInterval)();
+  (0, _loader.pageLoaded)().then(function () {
+    content.classList.add('loaded');
+    loader.classList.add('vid-loaded');
+    loopVideoWrap.classList.add('loaded');
+  });
+}
+
+},{"./loader":3}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -153,7 +187,7 @@ function preloader() {
   });
 }
 
-},{"./initCoverVideo":2,"./loader":3,"./utils":5}],5:[function(require,module,exports){
+},{"./initCoverVideo":2,"./loader":3,"./utils":6}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -185,7 +219,7 @@ var playVideoElement = exports.playVideoElement = function playVideoElement(vide
   });
 };
 
-},{"es6-promise":6}],6:[function(require,module,exports){
+},{"es6-promise":7}],7:[function(require,module,exports){
 (function (process,global){
 /*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -1347,7 +1381,7 @@ return Promise;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":7}],7:[function(require,module,exports){
+},{"_process":8}],8:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
