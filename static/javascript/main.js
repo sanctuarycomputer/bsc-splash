@@ -13,9 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 $(document).ready(function () {
   var isTouchDevice = 'ontouchstart' in document.documentElement;
-  if (isTouchDevice) {
-    console.log(isTouchDevice);
 
+  if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     (0, _mobilePreloader2.default)();
   } else {
     (0, _preloader2.default)();
@@ -105,29 +104,33 @@ function pageLoaded() {
 }
 
 },{"es6-promise":7}],4:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = mobilePreloader;
 
-var _loader = require("./loader");
+var _loader = require('./loader');
+
+var _utils = require('./utils');
 
 var loader = document.querySelector(".loader");
 var content = document.getElementById("content-wrap");
 var loopVideoWrap = document.getElementById("background-video-wrap-loop");
+var contentBack = document.querySelector(".content-container");
 
 function mobilePreloader() {
+  var string = 'static/images/BSC_POSTER.jpg';
   (0, _loader.outInterval)();
   (0, _loader.pageLoaded)().then(function () {
     content.classList.add('loaded');
     loader.classList.add('vid-loaded');
-    loopVideoWrap.classList.add('loaded');
+    contentBack.style.backgroundImage = "url('" + string + "')";
   });
 }
 
-},{"./loader":3}],5:[function(require,module,exports){
+},{"./loader":3,"./utils":6}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
