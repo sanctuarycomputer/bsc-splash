@@ -1,6 +1,6 @@
 import { outInterval, pageLoaded }  from './loader';
-import { loadVideoFromURL, playVideoElement } from './utils';
-import initCoverVideo from './initCoverVideo';
+import { loadVideoFromURL, playVideoElement, loadBackgroundImage } from './utils';
+import { initIntroVideo, initLoopVideo } from './initcovervideo';
 
 let loopingVideoLoaded = false;
 let introVideoFinished = false;
@@ -16,7 +16,11 @@ let loopVideoWrap = document.getElementById("background-video-wrap-loop")
 let loopVideoElement = document.getElementById("video-element-loop")
 let loopURL = loopVideo.src;
 
-initCoverVideo();
+if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+}else{
+  initIntroVideo();
+  initLoopVideo();
+}
 
 function maybeStartVideoLoop(){
   if (loopingVideoLoaded && introVideoFinished) {

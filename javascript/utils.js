@@ -13,7 +13,19 @@ export const loadVideoFromURL = (url) => {
 export const playVideoElement = (videoElement) => {
   return new Promise((resolve)=> {
     videoElement.addEventListener("ended", resolve);
-    videoElement.load();
     videoElement.play();
+  });
+}
+
+export const loadBackgroundImage = (imageSrc) => {
+  let contentBack = document.querySelector(".content-container")
+  return new Promise((resolve, reject) => {
+    let imageLoader = new Image();
+    imageLoader.onload = function() {
+      contentBack.style.backgroundImage = "url('" + imageSrc + "')";
+      resolve();
+    }
+    imageLoader.onerror = reject;
+    imageLoader.src = imageSrc;
   });
 }

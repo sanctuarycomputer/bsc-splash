@@ -12,8 +12,6 @@ var _mobilePreloader2 = _interopRequireDefault(_mobilePreloader);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  var isTouchDevice = 'ontouchstart' in document.documentElement;
-
   if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     (0, _mobilePreloader2.default)();
   } else {
@@ -27,10 +25,13 @@ $(document).ready(function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = initCoverVideo;
-function initCoverVideo() {
-  $('.covervid-video-loop').coverVid(1280, 720);
+exports.initIntroVideo = initIntroVideo;
+exports.initLoopVideo = initLoopVideo;
+function initIntroVideo() {
   $('.covervid-video-intro').coverVid(1280, 720);
+}
+function initLoopVideo() {
+  $('.covervid-video-loop').coverVid(1280, 720);
 }
 
 },{}],3:[function(require,module,exports){
@@ -119,14 +120,15 @@ var loader = document.querySelector(".loader");
 var content = document.getElementById("content-wrap");
 var loopVideoWrap = document.getElementById("background-video-wrap-loop");
 var contentBack = document.querySelector(".content-container");
+var backgroundURL = 'static/images/BSC_POSTER.jpg';
 
 function mobilePreloader() {
-  var string = 'static/images/BSC_POSTER.jpg';
   (0, _loader.outInterval)();
-  (0, _loader.pageLoaded)().then(function () {
-    content.classList.add('loaded');
-    loader.classList.add('vid-loaded');
-    contentBack.style.backgroundImage = "url('" + string + "')";
+  (0, _utils.loadBackgroundImage)(backgroundURL).then(function () {
+    (0, _loader.pageLoaded)().then(function () {
+      content.classList.add('loaded');
+      loader.classList.add('vid-loaded');
+    });
   });
 }
 
@@ -142,11 +144,7 @@ var _loader = require('./loader');
 
 var _utils = require('./utils');
 
-var _initCoverVideo = require('./initCoverVideo');
-
-var _initCoverVideo2 = _interopRequireDefault(_initCoverVideo);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _initcovervideo = require('./initcovervideo');
 
 var loopingVideoLoaded = false;
 var introVideoFinished = false;
@@ -162,7 +160,10 @@ var loopVideoWrap = document.getElementById("background-video-wrap-loop");
 var loopVideoElement = document.getElementById("video-element-loop");
 var loopURL = loopVideo.src;
 
-(0, _initCoverVideo2.default)();
+if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {} else {
+  (0, _initcovervideo.initIntroVideo)();
+  (0, _initcovervideo.initLoopVideo)();
+}
 
 function maybeStartVideoLoop() {
   if (loopingVideoLoaded && introVideoFinished) {
@@ -190,19 +191,21 @@ function preloader() {
   });
 }
 
-},{"./initCoverVideo":2,"./loader":3,"./utils":6}],6:[function(require,module,exports){
-"use strict";
+},{"./initcovervideo":2,"./loader":3,"./utils":6}],6:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.playVideoElement = exports.loadVideoFromURL = undefined;
+exports.loadBackgroundImage = exports.playVideoElement = exports.loadVideoFromURL = undefined;
 
-var _es6Promise = require("es6-promise");
+var _es6Promise = require('es6-promise');
 
 var _es6Promise2 = _interopRequireDefault(_es6Promise);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var string = 'static/images/BSC_POSTER.jpg';
 
 var loadVideoFromURL = exports.loadVideoFromURL = function loadVideoFromURL(url) {
   return new _es6Promise2.default(function (resolve, reject) {
@@ -217,8 +220,21 @@ var loadVideoFromURL = exports.loadVideoFromURL = function loadVideoFromURL(url)
 var playVideoElement = exports.playVideoElement = function playVideoElement(videoElement) {
   return new _es6Promise2.default(function (resolve) {
     videoElement.addEventListener("ended", resolve);
-    videoElement.load();
+    // videoElement.load();
     videoElement.play();
+  });
+};
+
+var loadBackgroundImage = exports.loadBackgroundImage = function loadBackgroundImage(imageSrc) {
+  var contentBack = document.querySelector(".content-container");
+  return new _es6Promise2.default(function (resolve, reject) {
+    var imageLoader = new Image();
+    imageLoader.onload = function () {
+      contentBack.style.backgroundImage = "url('" + imageSrc + "')";
+      resolve();
+    };
+    imageLoader.onerror = reject;
+    imageLoader.src = imageSrc;
   });
 };
 
