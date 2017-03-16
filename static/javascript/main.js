@@ -151,20 +151,19 @@ var introVideoFinished = false;
 var loader = document.querySelector(".loader");
 var content = document.getElementById("content-wrap");
 var introVideo = document.getElementById("background-video-intro");
-var url = introVideo.src;
+var url = "static/videos/BSC_INTRO.mp4";
 var introVideoWrap = document.getElementById("background-video-wrap-intro");
 var introVideoElement = document.getElementById("video-element-intro");
 
 var loopVideo = document.getElementById("background-video-loop");
 var loopVideoWrap = document.getElementById("background-video-wrap-loop");
 var loopVideoElement = document.getElementById("video-element-loop");
-var loopURL = loopVideo.src;
+var loopURL = "static/videos/BSC_LOOP.mp4";
 
 if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {} else {
   (0, _initcovervideo.initIntroVideo)();
   (0, _initcovervideo.initLoopVideo)();
 }
-
 function maybeStartVideoLoop() {
   if (loopingVideoLoaded && introVideoFinished) {
     (0, _utils.playVideoElement)(loopVideoElement);
@@ -174,38 +173,38 @@ function preloader() {
   (0, _loader.outInterval)();
   (0, _utils.loadVideoFromURL)(url).then(function () {
     (0, _loader.pageLoaded)().then(function () {
+      introVideoElement.src = url;
       loader.classList.add('vid-loaded');
       introVideoWrap.classList.add('loaded');
       (0, _utils.playVideoElement)(introVideoElement).then(function () {
         introVideoFinished = true;
+        loopVideoElement.src = loopURL;
         loopVideoWrap.classList.add('loaded');
         introVideoWrap.classList.remove('loaded');
         maybeStartVideoLoop();
         content.classList.add('loaded');
       });
     });
-  });
-  (0, _utils.loadVideoFromURL)(loopURL).then(function () {
-    loopingVideoLoaded = true;
-    maybeStartVideoLoop();
+    (0, _utils.loadVideoFromURL)(loopURL).then(function () {
+      loopingVideoLoaded = true;
+      maybeStartVideoLoop();
+    });
   });
 }
 
 },{"./initcovervideo":2,"./loader":3,"./utils":6}],6:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.loadBackgroundImage = exports.playVideoElement = exports.loadVideoFromURL = undefined;
 
-var _es6Promise = require('es6-promise');
+var _es6Promise = require("es6-promise");
 
 var _es6Promise2 = _interopRequireDefault(_es6Promise);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var string = 'static/images/BSC_POSTER.jpg';
 
 var loadVideoFromURL = exports.loadVideoFromURL = function loadVideoFromURL(url) {
   return new _es6Promise2.default(function (resolve, reject) {
@@ -220,7 +219,6 @@ var loadVideoFromURL = exports.loadVideoFromURL = function loadVideoFromURL(url)
 var playVideoElement = exports.playVideoElement = function playVideoElement(videoElement) {
   return new _es6Promise2.default(function (resolve) {
     videoElement.addEventListener("ended", resolve);
-    // videoElement.load();
     videoElement.play();
   });
 };
