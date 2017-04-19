@@ -27,7 +27,17 @@
     <meta name="description" content="{% block description %}{{ site_description|default('Built with Webhook.') }}{% endblock %}">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="shortcut icon" href="/static/images/favicon.png">
+    <meta content="/static/images/sharecard.jpg" property="og:image">
+    <meta content="Baking Supply Co" property="og:title">
+    <meta content="Baking ingredients shipped to your door, designed to taste great with “Herbal” butters" property="og:description">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@bakingsupply">
+    <meta name="twitter:title" content="Baking Supply Co">
+    <meta name="twitter:description" content="Baking ingredients shipped to your door, designed to taste great with “Herbal” butters">
+    <meta name="twitter:image" content="/static/images/sharecard.jpg">
+
+    <link rel="shortcut icon" href="/static/images/favicon_image.png">
     <link rel="apple-touch-icon" href="/static/images/touch-icon.png">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">

@@ -5,22 +5,33 @@ var _preloader = require('./preloader');
 
 var _preloader2 = _interopRequireDefault(_preloader);
 
+var _mobilePreloader = require('./mobilePreloader');
+
+var _mobilePreloader2 = _interopRequireDefault(_mobilePreloader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  (0, _preloader2.default)();
+  if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    (0, _mobilePreloader2.default)();
+  } else {
+    (0, _preloader2.default)();
+  }
 });
 
-},{"./preloader":4}],2:[function(require,module,exports){
+},{"./mobilePreloader":4,"./preloader":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = initCoverVideo;
-function initCoverVideo() {
-  $('.covervid-video-loop').coverVid(1280, 720);
+exports.initIntroVideo = initIntroVideo;
+exports.initLoopVideo = initLoopVideo;
+function initIntroVideo() {
   $('.covervid-video-intro').coverVid(1280, 720);
+}
+function initLoopVideo() {
+  $('.covervid-video-loop').coverVid(1280, 720);
 }
 
 },{}],3:[function(require,module,exports){
@@ -93,7 +104,35 @@ function pageLoaded() {
   });
 }
 
-},{"es6-promise":6}],4:[function(require,module,exports){
+},{"es6-promise":7}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = mobilePreloader;
+
+var _loader = require('./loader');
+
+var _utils = require('./utils');
+
+var loader = document.querySelector(".loader");
+var content = document.getElementById("content-wrap");
+var loopVideoWrap = document.getElementById("background-video-wrap-loop");
+var contentBack = document.querySelector(".content-container");
+var backgroundURL = 'static/images/BSC_POSTER.jpg';
+
+function mobilePreloader() {
+  (0, _loader.outInterval)();
+  (0, _utils.loadBackgroundImage)(backgroundURL).then(function () {
+    (0, _loader.pageLoaded)().then(function () {
+      content.classList.add('loaded');
+      loader.classList.add('vid-loaded');
+    });
+  });
+}
+
+},{"./loader":3,"./utils":6}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -105,28 +144,26 @@ var _loader = require('./loader');
 
 var _utils = require('./utils');
 
-var _initCoverVideo = require('./initCoverVideo');
-
-var _initCoverVideo2 = _interopRequireDefault(_initCoverVideo);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _initcovervideo = require('./initcovervideo');
 
 var loopingVideoLoaded = false;
 var introVideoFinished = false;
 var loader = document.querySelector(".loader");
 var content = document.getElementById("content-wrap");
 var introVideo = document.getElementById("background-video-intro");
-var url = introVideo.src;
+var url = "static/videos/BSC_INTRO.mp4";
 var introVideoWrap = document.getElementById("background-video-wrap-intro");
 var introVideoElement = document.getElementById("video-element-intro");
 
 var loopVideo = document.getElementById("background-video-loop");
 var loopVideoWrap = document.getElementById("background-video-wrap-loop");
 var loopVideoElement = document.getElementById("video-element-loop");
-var loopURL = loopVideo.src;
+var loopURL = "static/videos/BSC_LOOP.mp4";
 
-(0, _initCoverVideo2.default)();
-
+if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {} else {
+  (0, _initcovervideo.initIntroVideo)();
+  (0, _initcovervideo.initLoopVideo)();
+}
 function maybeStartVideoLoop() {
   if (loopingVideoLoaded && introVideoFinished) {
     (0, _utils.playVideoElement)(loopVideoElement);
@@ -136,30 +173,32 @@ function preloader() {
   (0, _loader.outInterval)();
   (0, _utils.loadVideoFromURL)(url).then(function () {
     (0, _loader.pageLoaded)().then(function () {
+      introVideoElement.src = url;
       loader.classList.add('vid-loaded');
       introVideoWrap.classList.add('loaded');
       (0, _utils.playVideoElement)(introVideoElement).then(function () {
         introVideoFinished = true;
+        loopVideoElement.src = loopURL;
         loopVideoWrap.classList.add('loaded');
         introVideoWrap.classList.remove('loaded');
         maybeStartVideoLoop();
         content.classList.add('loaded');
       });
     });
-  });
-  (0, _utils.loadVideoFromURL)(loopURL).then(function () {
-    loopingVideoLoaded = true;
-    maybeStartVideoLoop();
+    (0, _utils.loadVideoFromURL)(loopURL).then(function () {
+      loopingVideoLoaded = true;
+      maybeStartVideoLoop();
+    });
   });
 }
 
-},{"./initCoverVideo":2,"./loader":3,"./utils":5}],5:[function(require,module,exports){
+},{"./initcovervideo":2,"./loader":3,"./utils":6}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.playVideoElement = exports.loadVideoFromURL = undefined;
+exports.loadBackgroundImage = exports.playVideoElement = exports.loadVideoFromURL = undefined;
 
 var _es6Promise = require("es6-promise");
 
@@ -180,12 +219,24 @@ var loadVideoFromURL = exports.loadVideoFromURL = function loadVideoFromURL(url)
 var playVideoElement = exports.playVideoElement = function playVideoElement(videoElement) {
   return new _es6Promise2.default(function (resolve) {
     videoElement.addEventListener("ended", resolve);
-    videoElement.load();
     videoElement.play();
   });
 };
 
-},{"es6-promise":6}],6:[function(require,module,exports){
+var loadBackgroundImage = exports.loadBackgroundImage = function loadBackgroundImage(imageSrc) {
+  var contentBack = document.querySelector(".content-container");
+  return new _es6Promise2.default(function (resolve, reject) {
+    var imageLoader = new Image();
+    imageLoader.onload = function () {
+      contentBack.style.backgroundImage = "url('" + imageSrc + "')";
+      resolve();
+    };
+    imageLoader.onerror = reject;
+    imageLoader.src = imageSrc;
+  });
+};
+
+},{"es6-promise":7}],7:[function(require,module,exports){
 (function (process,global){
 /*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -1347,7 +1398,7 @@ return Promise;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":7}],7:[function(require,module,exports){
+},{"_process":8}],8:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 

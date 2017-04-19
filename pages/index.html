@@ -6,7 +6,7 @@
 {% include "templates/partials/loader.html" %}
 <div class='fixed' style='height: 100%; width:100%'>
   <div class="content-container py3 px1 relative flex content-center" id="content-wrap" style="overflow: scroll">
-    <div class="content flex-column flex justify-around">
+    <div class="content flex-column flex items-center justify-around">
       <div class="logo mx-auto"></div>
       <p class="blue my1 large copy mx-auto bebas center">
         BAKING INGREDIENTS SHIPPED TO YOUR DOOR<br>
@@ -16,18 +16,18 @@
       <form class="email mb2 mx-auto mailchimp-form">
        <input id='email' class='border-radius mx-auto center bebas large input mb2' placeholder='HIGH@ON-BAKED-EDIBLES.COM' type='email'>
        <button type='submit' class='border-radius mx-auto center bebas pink large mb1 button block'>GIVE ME THEM UPDATES</button>
-       <label class='label center medium bebas blue'>( SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE )</label>
+       <label class='label center mx-auto medium bebas blue'>( SIGN UP TO ACCESS OUR SECRET HERBAL BUTTER RECIPE )</label>
      </form>
     </div>
   </div>
-  <div class="covervid-wrapper" id="background-video-wrap-loop">
+  <div class="covervid-wrapper xs-hide" id="background-video-wrap-loop">
     <video class="covervid-video-loop" id="video-element-loop" loop poster="static/images/BSC_POSTER.jpg">
-      <source src="static/videos/BSC_LOOP.mp4" id="background-video-loop" type="video/webm">
+      <source src="" id="background-video-loop" type="video/webm">
     </video>
   </div>
-  <div class="covervid-wrapper" id="background-video-wrap-intro">
+  <div class="covervid-wrapper xs-hide" id="background-video-wrap-intro">
     <video class="covervid-video-intro" id="video-element-intro" poster="static/images/BSC_POSTER.jpg">
-      <source src="static/videos/BSC_INTRO.mp4" id="background-video-intro" type="video/webm">
+      <source src="" id="background-video-intro" type="video/webm">
     </video>
   </div>
 </div>
