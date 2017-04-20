@@ -299,6 +299,7 @@ function preloader() {
   (0, _loader.outInterval)();
   (0, _utils.loadBackgroundImage)(backgroundURL);
   (0, _utils.loadVideoFromURL)(url).then(function () {
+    $('.content-wrapper').addClass('has-video');
     (0, _loader.pageLoaded)().then(function () {
       introVideoElement.src = url;
       loader.classList.add('vid-loaded');

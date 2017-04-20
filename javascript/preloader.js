@@ -32,6 +32,7 @@ export default function preloader() {
   outInterval();
   loadBackgroundImage(backgroundURL);
   loadVideoFromURL(url).then(function(){
+    $('.content-wrapper').addClass('has-video');
     pageLoaded().then(function(){
       introVideoElement.src = url;
       loader.classList.add('vid-loaded');

@@ -7,13 +7,13 @@
   z-index:5;
   white-space: nowrap;
 
-  @media (max-width:58em) {
+  @media (max-height:58em) {
+    max-height: 820px;
+  }
+  @media (max-height:44em) {
     max-height: 540px;
   }
-  @media (max-width:40em) {
-    max-height: 540px;
-  }
-  @media (max-width:24em) {
+  @media (max-height:32em) {
     max-height: 540px;
   }
 
@@ -45,7 +45,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70%;
-  @media (min-width:40em) {
+  &.has-video {
     background-image: none !important;
   }
 }
