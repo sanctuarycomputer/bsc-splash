@@ -10,15 +10,15 @@
 }
 #background-video-wrap-intro {
   opacity: 0;
-  transition: 1s opacity;
+  transition: 1000ms 1000ms opacity ease-in-out;
   &.loaded {
-    opacity: 1;
+    opacity: 0.9;
   }
 }
 #background-video-wrap-loop {
   opacity: 0;
-  transition: 1s opacity;
+  transition: 1000ms 1000ms opacity ease-in-out;
   &.loaded {
-    opacity: 1;
+    opacity: 0.9;
   }
 }

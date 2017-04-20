@@ -1,13 +1,16 @@
 @import 'utils/color';
 @import 'utils/fonts';
 
-
 @import 'components/covervid';
 @import 'components/content';
 @import 'components/email';
 @import 'components/copy';
 @import 'components/loader';
 @import 'components/imgs';
+
+input {
+  outline: none;
+}
 
 html,body {
   width:100%;
@@ -19,4 +22,45 @@ html,body {
   margin:0;
   padding:0;
   box-sizing: border-box;
+}
+
+.upper-squeeze {
+  margin-top: 7%;
+}
+.lower-squeeze {
+  margin-bottom: 2%;
+}
+.pulsate {
+  -webkit-animation: pulsate 1.2s infinite alternate;
+  -moz-animation: pulsate 1.2s infinite alternate;
+  -animation: pulsate 1.2s infinite alternate;
+}
+
+@-webkit-keyframes pulsate {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+@-moz-keyframes pulsate {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+@keyframes pulsate {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+.sweet-overlay {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+.custom-modal {
+  border-radius: 13px;
+  border: 9px solid blue;
+  padding: 50px 50px !important;
+  .sa-button-container, .sa-error-container, fieldset {
+    display: none;
+  }
+  h2 {
+    font-family: $bebas;
+    letter-spacing: 2px;
+    color: blue !important;
+  }
 }

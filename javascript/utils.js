@@ -18,7 +18,7 @@ export const playVideoElement = (videoElement) => {
 }
 
 export const loadBackgroundImage = (imageSrc) => {
-  let contentBack = document.querySelector(".content-container")
+  let contentBack = $(".content-container").parent().get(0);
   return new Promise((resolve, reject) => {
     let imageLoader = new Image();
     imageLoader.onload = function() {
