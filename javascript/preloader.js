@@ -1,6 +1,8 @@
 import { outInterval, pageLoaded }  from './loader';
 import { loadVideoFromURL, playVideoElement, loadBackgroundImage } from './utils';
 import { initIntroVideo, initLoopVideo } from './initcovervideo';
+import contentEntrance from './contentEntrance';
+var backgroundURL = 'static/images/BSC_POSTER.jpg';
 
 let loopingVideoLoaded = false;
 let introVideoFinished = false;
@@ -28,18 +30,19 @@ function maybeStartVideoLoop(){
 }
 export default function preloader() {
   outInterval();
+  loadBackgroundImage(backgroundURL);
   loadVideoFromURL(url).then(function(){
     pageLoaded().then(function(){
       introVideoElement.src = url;
       loader.classList.add('vid-loaded');
       introVideoWrap.classList.add('loaded');
+      contentEntrance();
       playVideoElement(introVideoElement).then(function(){
         introVideoFinished = true;
         loopVideoElement.src = loopURL;
         loopVideoWrap.classList.add('loaded');
         introVideoWrap.classList.remove('loaded');
         maybeStartVideoLoop();
-        content.classList.add('loaded');
       });
     });
     loadVideoFromURL(loopURL).then(function(){

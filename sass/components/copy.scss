@@ -1,7 +1,7 @@
 .large{
   font-size:2.5rem;
   line-height: 4rem;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   word-spacing: 4px;
   @media (max-width:58em) {
     font-size:2.25rem;
@@ -45,7 +45,7 @@
     word-spacing: 1px;
   }
   @media (max-width:24em) {
-    font-size:.75rem;
+    font-size:1rem;
     line-height: 2.5rem;
   }
 }
