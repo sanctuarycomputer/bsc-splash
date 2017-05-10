@@ -185,32 +185,71 @@ var _sweetalert2 = _interopRequireDefault(_sweetalert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function mailShrimp() {
+(function ($) {
+  'use strict';
 
-  $('.mailchimp-form').ajaxChimp({
-    url: '//bakingsupply.us15.list-manage.com/subscribe/post?u=4f4fea5283e41f77342964432&amp;id=961be535b5',
-    callback: function callback(_ref) {
-      var msg = _ref.msg,
-          result = _ref.result;
-
-      $('.mailchimp-form input').val('');
-      if (result !== "success") {
-        (0, _sweetalert2.default)({
-          title: "Something went wrong - please try again.",
-          animation: 'slide-from-top',
-          showConfirmButton: false,
-          timer: 3500,
-          customClass: 'custom-modal'
+  $.mailchimpSingleOptIn = {
+    init: function init(selector, options) {
+      $(selector).mailchimpSingleOptIn(options);
+    }
+  };
+  $.fn.mailchimpSingleOptIn = function (options) {
+    $(this).each(function (i, elem) {
+      var form = $(elem);
+      var email = form.find('input[type=email]');
+      var settings = $.extend({
+        onSubmit: function onSubmit() {},
+        onError: function onError() {},
+        onSuccess: function onSuccess() {}
+      }, options);
+      form.attr('novalidate', 'true');
+      email.attr('name', 'email');
+      form.submit(function (e) {
+        e.preventDefault();
+        var data = { list_id: settings.listID };
+        var dataArray = form.serializeArray();
+        $.each(dataArray, function (index, item) {
+          data[item.name] = item.value;
         });
-        return;
-      }
+        settings.onSubmit();
+        $.ajax({
+          method: 'POST',
+          url: settings.url,
+          data: data,
+          success: settings.onSuccess,
+          error: settings.onError
+        });
+      });
+    });
+    return this;
+  };
+})(jQuery);
+
+function mailShrimp() {
+  $('.mailchimp-form').mailchimpSingleOptIn({
+    listID: '961be535b5',
+    url: 'https://bsc-mailchimp.herokuapp.com/',
+    onError: function onError(request) {
+      var text = request.responseJSON['detail'] || 'Something went wrong - please try again.';
       (0, _sweetalert2.default)({
-        title: "Check your email for a link to our Super Secret Herbal Butter Recipe.",
+        title: text,
         animation: 'slide-from-top',
         showConfirmButton: false,
-        timer: 3500,
+        timer: 3000,
         customClass: 'custom-modal'
       });
+    },
+    onSuccess: function onSuccess() {
+      (0, _sweetalert2.default)({
+        title: "Thanks! You're being redirected to our super-secret-butter-recipe!",
+        animation: 'slide-from-top',
+        showConfirmButton: false,
+        timer: 3000,
+        customClass: 'custom-modal'
+      });
+      setTimeout(function () {
+        window.location = 'http://butter.bakingsupply.co';
+      }, 3000);
     }
   });
 }

@@ -1,28 +1,69 @@
 import sweetalert from 'sweetalert'
 
-export default function mailShrimp() {
-
-  $('.mailchimp-form').ajaxChimp({
-    url: '//bakingsupply.us15.list-manage.com/subscribe/post?u=4f4fea5283e41f77342964432&amp;id=961be535b5',
-    callback({ msg, result }) {
-      $('.mailchimp-form input').val('');
-      if (result !== "success") {
-        sweetalert({
-          title: "Something went wrong - please try again.",
-          animation: 'slide-from-top',
-          showConfirmButton: false,
-          timer: 3500,
-          customClass: 'custom-modal'
+(function ($) {
+  'use strict';
+  $.mailchimpSingleOptIn = {
+    init: function (selector, options) {
+      $(selector).mailchimpSingleOptIn(options);
+    }
+  };
+  $.fn.mailchimpSingleOptIn = function (options) {
+    $(this).each(function(i, elem) {
+      let form = $(elem);
+      let email = form.find('input[type=email]');
+      let settings = $.extend({
+        onSubmit() {},
+        onError() {},
+        onSuccess() {}
+      }, options);
+      form.attr('novalidate', 'true');
+      email.attr('name', 'email');
+      form.submit(function (e) {
+        e.preventDefault();
+        let data = { list_id: settings.listID };
+        let dataArray = form.serializeArray();
+        $.each(dataArray, function (index, item) {
+          data[item.name] = item.value;
         });
-        return;
-      }
+        settings.onSubmit();
+        $.ajax({
+          method: 'POST',
+          url: settings.url,
+          data: data,
+          success: settings.onSuccess,
+          error: settings.onError
+        });
+      });
+    });
+    return this;
+  };
+})(jQuery);
+
+export default function mailShrimp() {
+  $('.mailchimp-form').mailchimpSingleOptIn({
+    listID: '961be535b5',
+    url: 'https://bsc-mailchimp.herokuapp.com/',
+    onError(request) {
+      let text = request.responseJSON['detail'] || 'Something went wrong - please try again.';
       sweetalert({
-        title: "Check your email for a link to our Super Secret Herbal Butter Recipe.",
+        title: text,
         animation: 'slide-from-top',
         showConfirmButton: false,
-        timer: 3500,
+        timer: 3000,
         customClass: 'custom-modal'
       });
+    },
+    onSuccess() {
+      sweetalert({
+        title: "Thanks! You're being redirected to our super-secret-butter-recipe!",
+        animation: 'slide-from-top',
+        showConfirmButton: false,
+        timer: 3000,
+        customClass: 'custom-modal'
+      });
+      setTimeout(function() {
+        window.location = 'http://butter.bakingsupply.co';
+      }, 3000);
     }
   });
 }
