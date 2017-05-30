@@ -75,18 +75,26 @@ var _mailshrimp = require('./mailshrimp');
 
 var _mailshrimp2 = _interopRequireDefault(_mailshrimp);
 
+var _sharers = require('./sharers');
+
+var _sharers2 = _interopRequireDefault(_sharers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  (0, _mailshrimp2.default)();
-  if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    (0, _mobilePreloader2.default)();
+  if (window.location.pathname === "/thanks/" || window.location.pathname === "/thanks") {
+    (0, _sharers2.default)();
   } else {
-    (0, _preloader2.default)();
+    (0, _mailshrimp2.default)();
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      (0, _mobilePreloader2.default)();
+    } else {
+      (0, _preloader2.default)();
+    }
   }
 });
 
-},{"./mailshrimp":5,"./mobilePreloader":6,"./preloader":7}],3:[function(require,module,exports){
+},{"./mailshrimp":5,"./mobilePreloader":6,"./preloader":7,"./sharers":8}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -95,10 +103,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.initIntroVideo = initIntroVideo;
 exports.initLoopVideo = initLoopVideo;
 function initIntroVideo() {
-  $('.covervid-video-intro').coverVid(1280, 720);
+  var $el = $('.covervid-video-intro');
+  if ($el.length) {
+    $el.coverVid(1280, 720);
+  }
 }
 function initLoopVideo() {
-  $('.covervid-video-loop').coverVid(1280, 720);
+  var $el = $('.covervid-video-loop');
+  if ($el.length) {
+    $el.coverVid(1280, 720);
+  }
 }
 
 },{}],4:[function(require,module,exports){
@@ -125,8 +139,14 @@ var out = document.getElementById("out");
 var inner = document.getElementById("in");
 var face = document.getElementById("face");
 
+var isTouchScreen = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 function outInterval() {
   if (loaded) return;
+  if (isTouchScreen) {
+    $('.loader-graphic').addClass('is-touch-screen');
+    return;
+  }
   rotationNum += 6;
   rotationNumNeg += -6;
   out.style['transform'] = "rotate(" + rotationNum + "deg)";
@@ -134,6 +154,7 @@ function outInterval() {
   inner.style['transform'] = "rotate(" + rotationNumNeg + "deg)";
   setTimeout(outInterval, 10);
 }
+
 function slowRotation(callback) {
   loader.classList.add('ready');
   if (!goTo) {
@@ -164,14 +185,16 @@ function slowRotation(callback) {
     }
   }
 }
+
 function pageLoaded() {
   loaded = true;
   return new _es6Promise2.default(function (resolve) {
+    if (isTouchScreen) return resolve();
     slowRotation(resolve);
   });
 }
 
-},{"es6-promise":9}],5:[function(require,module,exports){
+},{"es6-promise":10}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -240,21 +263,12 @@ function mailShrimp() {
       });
     },
     onSuccess: function onSuccess() {
-      (0, _sweetalert2.default)({
-        title: "Thanks! You're being redirected to our super-secret-butter-recipe!",
-        animation: 'slide-from-top',
-        showConfirmButton: false,
-        timer: 3000,
-        customClass: 'custom-modal'
-      });
-      setTimeout(function () {
-        window.location = 'http://butter.bakingsupply.co';
-      }, 3000);
+      window.location = 'http://www.bakingsupply.co/thanks/';
     }
   });
 }
 
-},{"sweetalert":19}],6:[function(require,module,exports){
+},{"sweetalert":20}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -289,7 +303,7 @@ function mobilePreloader() {
   });
 }
 
-},{"./contentEntrance":1,"./loader":4,"./utils":8}],7:[function(require,module,exports){
+},{"./contentEntrance":1,"./loader":4,"./utils":9}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -359,7 +373,41 @@ function preloader() {
   });
 }
 
-},{"./contentEntrance":1,"./initcovervideo":3,"./loader":4,"./utils":8}],8:[function(require,module,exports){
+},{"./contentEntrance":1,"./initcovervideo":3,"./loader":4,"./utils":9}],8:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+function twitShare(winWidth, winHeight) {
+  var winTop = screen.height / 2 - winHeight / 2;
+  var winLeft = screen.width / 2 - winWidth / 2;
+  return window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.bakingsupply.co&text=Signup%20for%20Baking%20Supply%20before%20July%20and%20get%2025%25%20off!', 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+}
+
+exports.default = function () {
+  $('.fb-share').on('click', function () {
+    FB.ui({
+      method: 'share',
+      href: 'http://www.bakingsupply.co'
+    }, function (response) {
+      if (response) {
+        window.location.href = "http://butter.bakingsupply.co";
+      }
+    });
+  });
+  $('.twit-share').on('click', function () {
+    var popup = twitShare(560, 240);
+    var timer = setInterval(function () {
+      if (popup.closed) {
+        clearInterval(timer);
+        window.location.href = "http://butter.bakingsupply.co";
+      }
+    }, 1000);
+  });
+};
+
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -403,7 +451,7 @@ var loadBackgroundImage = exports.loadBackgroundImage = function loadBackgroundI
   });
 };
 
-},{"es6-promise":9}],9:[function(require,module,exports){
+},{"es6-promise":10}],10:[function(require,module,exports){
 (function (process,global){
 /*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -1565,7 +1613,7 @@ return Promise;
 
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":10}],10:[function(require,module,exports){
+},{"_process":11}],11:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -1747,7 +1795,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1780,7 +1828,7 @@ var defaultParams = {
 
 exports['default'] = defaultParams;
 module.exports = exports['default'];
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1916,7 +1964,7 @@ exports['default'] = {
   handleCancel: handleCancel
 };
 module.exports = exports['default'];
-},{"./handle-dom":13,"./handle-swal-dom":15,"./utils":18}],13:[function(require,module,exports){
+},{"./handle-dom":14,"./handle-swal-dom":16,"./utils":19}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2108,7 +2156,7 @@ exports.fadeIn = fadeIn;
 exports.fadeOut = fadeOut;
 exports.fireClick = fireClick;
 exports.stopEventPropagation = stopEventPropagation;
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2188,7 +2236,7 @@ var handleKeyDown = function handleKeyDown(event, params, modal) {
 
 exports['default'] = handleKeyDown;
 module.exports = exports['default'];
-},{"./handle-dom":13,"./handle-swal-dom":15}],15:[function(require,module,exports){
+},{"./handle-dom":14,"./handle-swal-dom":16}],16:[function(require,module,exports){
 'use strict';
 
 var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
@@ -2356,7 +2404,7 @@ exports.openModal = openModal;
 exports.resetInput = resetInput;
 exports.resetInputError = resetInputError;
 exports.fixVerticalPosition = fixVerticalPosition;
-},{"./default-params":11,"./handle-dom":13,"./injected-html":16,"./utils":18}],16:[function(require,module,exports){
+},{"./default-params":12,"./handle-dom":14,"./injected-html":17,"./utils":19}],17:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2399,7 +2447,7 @@ var injectedHTML =
 
 exports["default"] = injectedHTML;
 module.exports = exports["default"];
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2625,7 +2673,7 @@ var setParameters = function setParameters(params) {
 
 exports['default'] = setParameters;
 module.exports = exports['default'];
-},{"./handle-dom":13,"./handle-swal-dom":15,"./utils":18}],18:[function(require,module,exports){
+},{"./handle-dom":14,"./handle-swal-dom":16,"./utils":19}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2699,7 +2747,7 @@ exports.hexToRgb = hexToRgb;
 exports.isIE8 = isIE8;
 exports.logStr = logStr;
 exports.colorLuminance = colorLuminance;
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
@@ -3003,4 +3051,4 @@ if (typeof window !== 'undefined') {
   _extend$hexToRgb$isIE8$logStr$colorLuminance.logStr('SweetAlert is a frontend module!');
 }
 module.exports = exports['default'];
-},{"./modules/default-params":11,"./modules/handle-click":12,"./modules/handle-dom":13,"./modules/handle-key":14,"./modules/handle-swal-dom":15,"./modules/set-params":17,"./modules/utils":18}]},{},[2]);
+},{"./modules/default-params":12,"./modules/handle-click":13,"./modules/handle-dom":14,"./modules/handle-key":15,"./modules/handle-swal-dom":16,"./modules/set-params":18,"./modules/utils":19}]},{},[2]);

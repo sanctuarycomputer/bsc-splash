@@ -7,6 +7,8 @@
 @import 'components/copy';
 @import 'components/loader';
 @import 'components/imgs';
+@import 'components/flag';
+@import 'components/thanks';
 
 input {
   outline: none;
@@ -25,7 +27,7 @@ html,body {
 }
 
 .upper-squeeze {
-  margin-top: 7%;
+  margin-top: 3%;
 }
 .lower-squeeze {
   margin-bottom: 2%;

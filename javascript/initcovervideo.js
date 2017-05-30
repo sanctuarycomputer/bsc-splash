@@ -1,6 +1,12 @@
 export function initIntroVideo(){
-  $('.covervid-video-intro').coverVid(1280, 720);
+  let $el = $('.covervid-video-intro');
+  if ($el.length) {
+    $el.coverVid(1280, 720);
+  }
 }
 export function initLoopVideo(){
-  $('.covervid-video-loop').coverVid(1280, 720);
+  let $el = $('.covervid-video-loop');
+  if ($el.length) {
+    $el.coverVid(1280, 720);
+  }
 }

@@ -1,6 +1,13 @@
 $loader-size: 220px;
 
+@-webkit-keyframes pulsate {
+  0% {opacity: 0.3;}
+  50% {opacity: 1.0;}
+  100% {opacity: 0.3;}
+}
+
 .loader{
+  -webkit-transform-style: preserve-3d !important;
   width:100%;
   height:100%;
   background-color: white;
@@ -9,6 +16,12 @@ $loader-size: 220px;
   align-items:center;
   transition: 1000ms 1000ms opacity ease-in-out;
   .loader-graphic{
+
+    &.is-touch-screen {
+      animation: pulsate 1200ms ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
     transition: 1000ms opacity ease-in-out;
     transform: rotateZ(360deg);
     width: $loader-size;
@@ -36,6 +49,9 @@ $loader-size: 220px;
       background-size: cover;
       background-position: center;
       background-image: url('/static/images/bsc-avery-face.svg');
+    }
+    .out, .in, .face {
+      transform-style: preserve-3d !important;
     }
   }
   &.vid-loaded{

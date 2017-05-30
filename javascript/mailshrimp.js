@@ -54,16 +54,7 @@ export default function mailShrimp() {
       });
     },
     onSuccess() {
-      sweetalert({
-        title: "Thanks! You're being redirected to our super-secret-butter-recipe!",
-        animation: 'slide-from-top',
-        showConfirmButton: false,
-        timer: 3000,
-        customClass: 'custom-modal'
-      });
-      setTimeout(function() {
-        window.location = 'http://butter.bakingsupply.co';
-      }, 3000);
+      window.location = 'http://www.bakingsupply.co/thanks/';
     }
   });
 }

@@ -1,0 +1,26 @@
+#thanks {
+  .content {
+    max-height: 520px;
+  }
+  img {
+    width: 300px;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    letter-spacing: 2px;
+  }
+  .wrap {
+    white-space: normal;
+  }
+  .fb-share, .twit-share {
+    cursor: pointer;
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    color: $blue;
+  }
+}

@@ -4,6 +4,8 @@ $opacity: 0.3;
   z-index:10;
   letter-spacing: 3px;
   .border-radius{
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 15px;
     border: 5px solid $blue;
     width: 100%;
@@ -26,6 +28,7 @@ $opacity: 0.3;
   }
   input{
     background-color: transparent;
+    font-size: 2rem;
   }
   ::-webkit-input-placeholder {
       color: $blue;

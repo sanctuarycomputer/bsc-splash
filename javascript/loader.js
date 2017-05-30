@@ -9,8 +9,14 @@ const out = document.getElementById("out");
 const inner = document.getElementById("in");
 const face = document.getElementById("face");
 
+const isTouchScreen = (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+
 export function outInterval() {
   if (loaded) return;
+  if (isTouchScreen) {
+    $('.loader-graphic').addClass('is-touch-screen');
+    return;
+  }
   rotationNum += 6;
   rotationNumNeg += -6;
   out.style['transform'] = "rotate("+rotationNum+"deg)";
@@ -18,6 +24,7 @@ export function outInterval() {
   inner.style['transform'] = "rotate("+rotationNumNeg+"deg)";
   setTimeout(outInterval, 10);
 }
+
 function slowRotation(callback) {
   loader.classList.add('ready');
   if(!goTo) {
@@ -48,9 +55,11 @@ function slowRotation(callback) {
     }
   }
 }
- export function pageLoaded() {
+
+export function pageLoaded() {
   loaded = true;
   return new Promise((resolve) => {
+    if (isTouchScreen) return resolve();
     slowRotation(resolve);
   });
 }

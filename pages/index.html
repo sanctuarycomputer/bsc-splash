@@ -2,8 +2,10 @@
 
 {% block content %}
 {% include "templates/partials/loader.html" %}
+
+
 <div class='fixed content-wrapper' style='height: 100%; width:100%'>
-  <div class="content-container py3 px1 relative flex content-center" id="content-wrap">
+  <div class="content-container py4 px1 relative flex content-center" id="content-wrap">
 
     <div class="content flex-column flex items-center justify-around">
       <div class="logo mx-auto lower-squeeze"></div>
@@ -11,16 +13,15 @@
         HEALTHY BAKING KITS FOR "HERB<span class='herb'>A</span>L" ENTHUSIASTS
       </p>
       <p class="fade-me-in text-2 blue large copy mx-auto bebas center">
-        DELIVERED DIRECTLY TO YOUR DOOR
+        LAUNCHING FALL 2017 IN NEW YORK
       </p>
       <p class="fade-me-in text-3 blue large copy mx-auto bebas center">
-        LAUNCHING FALL 2017 IN NEW YORK & CALI
+        ENTER YOUR EMAIL BEFORE JULY FOR 25% OFF
       </p>
       </p>
-      <form class="upper-squeeze email mb2 mx-auto mailchimp-form" autocomplete="off">
+      <form class="upper-squeeze email mx-auto mailchimp-form" autocomplete="off">
        <input id='mc-email' class='blue border-radius mx-auto center bebas large input mb2' placeholder='buddy@bakingsupply.co' type='email'>
-       <button type='submit' class='border-radius mx-auto center bebas pink large mb2 button block'>I'd like to receive updates</button>
-       <label class='label center mx-auto medium bebas blue'>( Sign up for our super-secret-herbal-butter-guide )</label>
+       <button type='submit' class='border-radius mx-auto center bebas pink large mb2 button block'>Grab that Discount</button>
      </form>
     </div>
   </div>
@@ -35,6 +36,24 @@
       <source src="" id="background-video-intro" type="video/webm">
     </video>
   </div>
-
 </div>
+
+<div class='flag'><h6>SIGNUP BEFORE JULY 1ST FOR A 25% DISCOUNT</h6></div>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '185388815319059'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=185388815319059&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
 {% endblock %}
