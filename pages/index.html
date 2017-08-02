@@ -1,19 +1,20 @@
 {% extends "templates/partials/base.html" %}
 
 {% block content %}
-{% include "templates/partials/loader.html" %}
 
 
-<div class='fixed content-wrapper' style='height: 100%; width:100%'>
+<div class='flag z5' style='top: 0px;'><h6>SIGNUP BEFORE AUGUST 15TH FOR A 25% DISCOUNT</h6></div>
+
+<div class='clearfix content-wrapper ' style='height: 90%; width:100%; top: 0;'>
   <div class="content-container py4 px1 relative flex content-center" id="content-wrap">
 
     <div class="content flex-column flex items-center justify-around">
-      <div class="logo mx-auto lower-squeeze"></div>
+      <div class="logo mx-auto lower-squeeze max-width-1"></div>
       <p class="fade-me-in text-1 blue large copy mx-auto bebas center">
         HEALTHY BAKING KITS FOR "HERB<span class='herb'>A</span>L" ENTHUSIASTS
       </p>
       <p class="fade-me-in text-2 blue large copy mx-auto bebas center">
-        LAUNCHING FALL 2017 IN NEW YORK
+        LAUNCHING FALL 2017 NEW YORK, JERSEY & NORTHEAST
       </p>
       <p class="fade-me-in text-3 blue large copy mx-auto bebas center">
         ENTER YOUR EMAIL BEFORE JULY FOR 25% OFF
@@ -26,6 +27,7 @@
     </div>
   </div>
 
+  <!--
   <div class="covervid-wrapper xs-hide" id="background-video-wrap-loop">
     <video class="covervid-video-loop" id="video-element-loop" loop poster="static/images/BSC_POSTER.jpg">
       <source src="" id="background-video-loop" type="video/webm">
@@ -36,9 +38,68 @@
       <source src="" id="background-video-intro" type="video/webm">
     </video>
   </div>
+  -->
 </div>
 
-<div class='flag'><h6>SIGNUP BEFORE JULY 1ST FOR A 25% DISCOUNT</h6></div>
+<div class='clearfix pt3 bg-white relative shadow' style=''>
+  <div class='mx-auto max-width-4'>
+    <div class='col col-12 md-col-6'>
+      <img style='width: 100%;' class='fit' src="https://d7zgbk06ve7c.cloudfront.net/assets/2508/h3b9lan5lceavn7y930e/butter-pour.gif" />
+    </div>
+    <div class='col col-12 md-col-6 px4'>
+      <img style='width: 60px; margin-top: 16px;' src='https://d7zgbk06ve7c.cloudfront.net/assets/2508/5ahrk9v743eaw35ummp1/eye.png' />
+      <h1 class='blue bebas'>EAT YOUR "GREEN"</h1>
+      <p class='blue body-copy'>
+        Think of us as a virtual bakery for people who’d rather eat their green: we create gluten and refined sugar free recipes, designed to taste great with herbal butters and oils.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class='clearfix pt4 relative bg-white'>
+  <div class='mx-auto max-width-4'>
+    <div class='col col-12 md-col-6 px4 text-right'>
+      <img style='width: 60px; margin-top: 16px;' src='https://d7zgbk06ve7c.cloudfront.net/assets/2508/70ru7tc05petawaokg30/avery.png' />
+      <h1 class='blue bebas'>Local & Sustainable Ingredients</h1>
+      <p class='blue body-copy mb4'>
+        We work with exceptional local farmers and partners to find the best quality ingredients, and deliver them, refrigerated, to your door.
+      </p>
+    </div>
+    <div class='col col-12 md-col-6'>
+      <img class='fit' src="https://d7zgbk06ve7c.cloudfront.net/assets/2508/o17ih6pdb7a0vd7khckz/box.jpg" />
+    </div>
+  </div>
+</div>
+
+<div class='clearfix pt4 relative bg-white pb4'>
+  <div class='mx-auto max-width-4'>
+    <div class='col col-12 md-col-6'>
+      <img class='fit' src="https://d7zgbk06ve7c.cloudfront.net/assets/2508/bokfcuazu8d9i7d80bbp/matcha_pink.jpg" />
+    </div>
+    <div class='col col-12 md-col-6 px4'>
+      <img style='width: 60px; margin-top: 16px;' src='https://d7zgbk06ve7c.cloudfront.net/assets/2508/frax8qeg8di9fsf329aq/leaf.png' />
+      <h1 class='blue bebas'>Gluten & Refined Sugar Free</h1>
+      <p class='blue body-copy'>
+        Inside each box you’ll find a comprehensive recipe designed to seamlessly walk you through the entire process: cooking, dosing, and storing.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class='clearfix py3 relative bg-blue'>
+  <div class='col col-12 center'>
+    <h1 class='white bebas' style='letter-spacing: 1.5px; line-height: 50px'>BAKING BOXES START AT $40. SIGNUP NOW AND SAVE 25%</h1>
+  </div>
+</div>
+
+<div class='clearfix pb4 bg-pink relative pt3 px2'>
+  <div class='col col-12 center'>
+    <form class="upper-squeeze email mx-auto mailchimp-form" autocomplete="off">
+      <input id='mc-email' class='blue border-radius mx-auto center bebas large input mb2' placeholder='buddy@bakingsupply.co' type='email'>
+      <button type='submit' class='border-radius mx-auto center bebas pink large mb2 button block'>Grab that Discount</button>
+    </form>
+  </div>
+</div>
 
 <!-- Facebook Pixel Code -->
 <script>

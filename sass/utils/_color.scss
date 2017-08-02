@@ -10,6 +10,15 @@ $blue: #002FF7;
 .white {
   color: $white;
 }
+.bg-white {
+  background-color: $white;
+}
 .bg-blue {
   background-color: $blue;
+}
+.bg-pink {
+  background-color: $pink;
+}
+.shadow {
+  box-shadow: 0 0 60px 1px #585858;
 }

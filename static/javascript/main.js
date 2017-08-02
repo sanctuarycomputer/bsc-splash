@@ -4,7 +4,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var startAt = 1825;
+var startAt = 0;
 
 exports.default = function () {
   var mobile = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
@@ -16,23 +16,23 @@ exports.default = function () {
 
     setTimeout(function () {
       $('.text-2').addClass('ready');
-    }, startAt + 800);
+    }, startAt);
 
     setTimeout(function () {
       $('.text-3').addClass('ready');
-    }, startAt + 1600);
+    }, startAt);
 
     setTimeout(function () {
       $('.logo').addClass('ready');
-    }, startAt + 2500);
+    }, startAt);
 
     setTimeout(function () {
       $('form').addClass('ready');
-    }, startAt + 3500);
+    }, startAt + 600);
 
     setTimeout(function () {
       $('form label').addClass('ready');
-    }, startAt + 4000);
+    }, startAt + 600);
     return;
   }
   setTimeout(function () {
@@ -82,16 +82,17 @@ var _sharers2 = _interopRequireDefault(_sharers);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(document).ready(function () {
-  if (window.location.pathname === "/thanks/" || window.location.pathname === "/thanks") {
-    (0, _sharers2.default)();
-  } else {
-    (0, _mailshrimp2.default)();
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      (0, _mobilePreloader2.default)();
-    } else {
-      (0, _preloader2.default)();
-    }
-  }
+  (0, _mailshrimp2.default)();
+  (0, _mobilePreloader2.default)();
+  //if (window.location.pathname === "/thanks/" || window.location.pathname === "/thanks") {
+  //  sharers();
+  //} else {
+  //  if( /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //    mobilePreloader();
+  //  } else{
+  //    preloader();
+  //  }
+  //}
 });
 
 },{"./mailshrimp":5,"./mobilePreloader":6,"./preloader":7,"./sharers":8}],3:[function(require,module,exports){
@@ -293,13 +294,16 @@ var contentBack = document.querySelector(".content-container");
 var backgroundURL = 'static/images/BSC_POSTER.jpg';
 
 function mobilePreloader() {
-  (0, _loader.outInterval)();
+  //loader.classList.add('vid-loaded');
+  //outInterval();
   (0, _utils.loadBackgroundImage)(backgroundURL).then(function () {
     (0, _contentEntrance2.default)(true);
-    (0, _loader.pageLoaded)().then(function () {
-      content.classList.add('loaded');
-      loader.classList.add('vid-loaded');
-    });
+    content.classList.add('loaded');
+    //  contentEntrance(true);
+    //  pageLoaded().then(function(){
+    //    content.classList.add('loaded');
+    //    loader.classList.add('vid-loaded');
+    //  });
   });
 }
 

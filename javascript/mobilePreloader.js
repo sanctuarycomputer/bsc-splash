@@ -9,12 +9,15 @@ let contentBack = document.querySelector(".content-container")
 var backgroundURL = 'static/images/BSC_POSTER.jpg';
 
 export default function mobilePreloader() {
-  outInterval();
+  //loader.classList.add('vid-loaded');
+  //outInterval();
   loadBackgroundImage(backgroundURL).then(function(){
     contentEntrance(true);
-    pageLoaded().then(function(){
-      content.classList.add('loaded');
-      loader.classList.add('vid-loaded');
-    });
+    content.classList.add('loaded');
+  //  contentEntrance(true);
+  //  pageLoaded().then(function(){
+  //    content.classList.add('loaded');
+  //    loader.classList.add('vid-loaded');
+  //  });
   });
 }

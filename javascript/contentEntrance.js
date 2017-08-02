@@ -1,4 +1,4 @@
-let startAt = 1825;
+let startAt = 0;
 
 export default (mobile = false) => {
   if (mobile) {
@@ -8,23 +8,23 @@ export default (mobile = false) => {
 
     setTimeout(() => {
       $('.text-2').addClass('ready');
-    }, startAt + 800);
+    }, startAt);
 
     setTimeout(() => {
       $('.text-3').addClass('ready');
-    }, startAt + 1600);
+    }, startAt);
 
     setTimeout(() => {
       $('.logo').addClass('ready');
-    }, startAt + 2500);
+    }, startAt);
 
     setTimeout(() => {
       $('form').addClass('ready');
-    }, startAt + 3500);
+    }, startAt + 600);
 
     setTimeout(() => {
       $('form label').addClass('ready');
-    }, startAt + 4000);
+    }, startAt + 600);
     return;
   }
   setTimeout(() => {

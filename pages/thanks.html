@@ -8,12 +8,9 @@
       </a>
       <h1 class='m0 bebas white mb1'>NICE.</h1>
       <h2 class='white bebas wrap mb3'>Psst, Wanna learn how to make Herbal Butter?</h2>
-      <h2 class='white bebas wrap mb3'>Share Baking Supply now to access our Secret Recipe.</h2>
-      <div>
-        <div class='fb-share'>Facebook</div>
-        <div class='twit-share'>Twitter</div>
-      </div>
-    </div>
+      <a href='http://butter.bakingsupply.co'>
+        <div class='fb-share'>Our Secret Herbal Butter Recipe</div>
+      </a>
   </div>
 </div>
 
@@ -25,7 +22,6 @@ n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '185388815319059'); // Insert your pixel ID here.
-fbq('track', 'PageView');
 fbq('track', 'Lead');
 </script>
 <noscript><img height="1" width="1" style="display:none"
@@ -33,30 +29,5 @@ src="https://www.facebook.com/tr?id=185388815319059&ev=PageView&noscript=1"
 /></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
-
-<script>
-  var appId = '1865390680392980';
-  if (window.location.host === 'localhost:2002') {
-    appId = '227306701090908';
-  }
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : appId,
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 
 {% endblock %}
